@@ -12,8 +12,6 @@ private:
 
 public:
     bool loadFromFile(const std::string& filename);
-    bool saveToFile();
     bool userExists(const std::string& login) const;
     std::string getPassword(const std::string& login) const;
-    bool addUser(const std::string& login, const std::string& password);
 };

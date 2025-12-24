@@ -27,20 +27,6 @@ bool ClientDatabase::loadFromFile(const std::string& fname) {
     return true;
 }
 
-bool ClientDatabase::saveToFile() {
-    std::ofstream file(filename);
-    if (!file.is_open()) {
-        return false;
-    }
-    
-    for (const auto& [login, password] : users) {
-        file << login << ":" << password << "\n";
-    }
-    
-    file.close();
-    return true;
-}
-
 bool ClientDatabase::userExists(const std::string& login) const {
     return users.find(login) != users.end();
 }
@@ -48,9 +34,4 @@ bool ClientDatabase::userExists(const std::string& login) const {
 std::string ClientDatabase::getPassword(const std::string& login) const {
     auto it = users.find(login);
     return (it != users.end()) ? it->second : "";
-}
-
-bool ClientDatabase::addUser(const std::string& login, const std::string& password) {
-    users[login] = password;
-    return saveToFile();
 }
