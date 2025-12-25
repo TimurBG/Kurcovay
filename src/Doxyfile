@@ -1,0 +1,8 @@
+PROJECT_NAME           = "Сервер аутентификации и обработки данных"
+PROJECT_NUMBER         = 1.0
+PROJECT_BRIEF          = "Сервер для обработки клиентских соединений с аутентификацией пользователей"
+OUTPUT_DIRECTORY       = docs
+INPUT                  = .
+OUTPUT_LANGUAGE        = Russian
+GENERATE_LATEX         = Yes
+EXTRACT_PRIVATE        = Yes

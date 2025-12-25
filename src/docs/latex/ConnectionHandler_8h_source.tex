@@ -1,0 +1,48 @@
+\hypertarget{ConnectionHandler_8h_source}{}\doxysection{Connection\+Handler.\+h}
+\mbox{\hyperlink{ConnectionHandler_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <sys/socket.h>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <netinet/in.h>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <unistd.h>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <arpa/inet.h>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <stdexcept>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <sys/select.h>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <sys/time.h>}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include <cerrno>}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{ClientDatabase_8h}{ClientDatabase.h}}"{}}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{Authenticator_8h}{Authenticator.h}}"{}}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{DataProcessor_8h}{DataProcessor.h}}"{}}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{Logger_8h}{Logger.h}}"{}}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{31 \textcolor{keyword}{class }\mbox{\hyperlink{classConnectionHandler}{ConnectionHandler}} \{}
+\DoxyCodeLine{32 \textcolor{keyword}{private}:}
+\DoxyCodeLine{33     \textcolor{keywordtype}{int} \mbox{\hyperlink{classConnectionHandler_ad4b84e685d8ab5664e2e10030622d32b}{clientSocket}};                  }
+\DoxyCodeLine{34     \mbox{\hyperlink{classClientDatabase}{ClientDatabase}}\& \mbox{\hyperlink{classConnectionHandler_a69364684104263edae0ac7c9e3530a4a}{clientDB}};          }
+\DoxyCodeLine{35     \mbox{\hyperlink{classLogger}{Logger}}\& \mbox{\hyperlink{classConnectionHandler_a0dac158a33237a8d7253ae7eb2e8efa8}{logger}};                    }
+\DoxyCodeLine{36     sockaddr\_in \mbox{\hyperlink{classConnectionHandler_ac8495ca1c3f554c5e5e7692afa22d1a3}{clientAddr}};            }
+\DoxyCodeLine{37     \textcolor{keyword}{static} \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} \mbox{\hyperlink{classConnectionHandler_a5c3a12f5481dd3940442c1e8e219c46f}{TIMEOUT\_SECONDS}} = 5; }
+\DoxyCodeLine{38 }
+\DoxyCodeLine{43     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classConnectionHandler_ab4c56449df7516ed823291285511f375}{authenticateClient}}();}
+\DoxyCodeLine{44     }
+\DoxyCodeLine{49     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classConnectionHandler_a4451a3eb3bbbb032e955982554288b8a}{processData}}();}
+\DoxyCodeLine{50     }
+\DoxyCodeLine{57     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classConnectionHandler_a2723e038c0973f87b6b06921bf7d9984}{receiveExactly}}(\textcolor{keywordtype}{void}* buffer, \textcolor{keywordtype}{size\_t} size);}
+\DoxyCodeLine{58     }
+\DoxyCodeLine{65     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classConnectionHandler_a1b6ae6f898c8abbed1d97383244b72bd}{sendExactly}}(\textcolor{keyword}{const} \textcolor{keywordtype}{void}* buffer, \textcolor{keywordtype}{size\_t} size);}
+\DoxyCodeLine{66     }
+\DoxyCodeLine{72     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classConnectionHandler_a339759217962bc4f47d1cf0fe1c641c5}{waitForData}}(\textcolor{keywordtype}{int} timeoutSeconds = \mbox{\hyperlink{classConnectionHandler_a5c3a12f5481dd3940442c1e8e219c46f}{TIMEOUT\_SECONDS}});}
+\DoxyCodeLine{73     }
+\DoxyCodeLine{81     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classConnectionHandler_a8f8dd1422a10452a1ff0ac0ed79f2d07}{receiveWithTimeout}}(\textcolor{keywordtype}{void}* buffer, \textcolor{keywordtype}{size\_t} size, \textcolor{keywordtype}{int} timeoutSeconds = \mbox{\hyperlink{classConnectionHandler_a5c3a12f5481dd3940442c1e8e219c46f}{TIMEOUT\_SECONDS}});}
+\DoxyCodeLine{82     }
+\DoxyCodeLine{90     ssize\_t \mbox{\hyperlink{classConnectionHandler_a704566a84b6081b6719019e967a61f50}{recvWithTimeout}}(\textcolor{keywordtype}{void}* buffer, \textcolor{keywordtype}{size\_t} size, \textcolor{keywordtype}{int} timeoutSeconds = \mbox{\hyperlink{classConnectionHandler_a5c3a12f5481dd3940442c1e8e219c46f}{TIMEOUT\_SECONDS}});}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92 \textcolor{keyword}{public}:}
+\DoxyCodeLine{100     \mbox{\hyperlink{classConnectionHandler_afa39603c5c4da29a9d77d8264f2a9640}{ConnectionHandler}}(\textcolor{keywordtype}{int} socket, \mbox{\hyperlink{classClientDatabase}{ClientDatabase}}\& db, \mbox{\hyperlink{classLogger}{Logger}}\& log, \textcolor{keyword}{const} sockaddr\_in\& addr);}
+\DoxyCodeLine{101     }
+\DoxyCodeLine{107     \textcolor{keywordtype}{void} \mbox{\hyperlink{classConnectionHandler_a78283195aac36509f85f204ba2b802a2}{handleConnection}}();}
+\DoxyCodeLine{108 \};}
+
+\end{DoxyCode}

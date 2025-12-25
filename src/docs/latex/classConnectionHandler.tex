@@ -1,0 +1,300 @@
+\hypertarget{classConnectionHandler}{}\doxysection{Класс Connection\+Handler}
+\label{classConnectionHandler}\index{ConnectionHandler@{ConnectionHandler}}
+
+
+Класс для обработки клиентских соединений  
+
+
+
+
+{\ttfamily \#include $<$Connection\+Handler.\+h$>$}
+
+
+
+Граф связей класса Connection\+Handler\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{classConnectionHandler__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classConnectionHandler_afa39603c5c4da29a9d77d8264f2a9640}{Connection\+Handler}} (int socket, \mbox{\hyperlink{classClientDatabase}{Client\+Database}} \&db, \mbox{\hyperlink{classLogger}{Logger}} \&log, const sockaddr\+\_\+in \&addr)
+\begin{DoxyCompactList}\small\item\em Конструктор класса \mbox{\hyperlink{classConnectionHandler}{Connection\+Handler}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classConnectionHandler_a78283195aac36509f85f204ba2b802a2}{handle\+Connection}} ()
+\begin{DoxyCompactList}\small\item\em Обрабатывает клиентское соединение \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые члены}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classConnectionHandler_ab4c56449df7516ed823291285511f375}{authenticate\+Client}} ()
+\begin{DoxyCompactList}\small\item\em Выполняет аутентификацию клиента \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classConnectionHandler_a4451a3eb3bbbb032e955982554288b8a}{process\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Обрабатывает данные от клиента \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classConnectionHandler_a2723e038c0973f87b6b06921bf7d9984}{receive\+Exactly}} (void $\ast$buffer, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Принимает точное количество байт \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classConnectionHandler_a1b6ae6f898c8abbed1d97383244b72bd}{send\+Exactly}} (const void $\ast$buffer, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Отправляет точное количество байт \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classConnectionHandler_a339759217962bc4f47d1cf0fe1c641c5}{wait\+For\+Data}} (int timeout\+Seconds=\mbox{\hyperlink{classConnectionHandler_a5c3a12f5481dd3940442c1e8e219c46f}{TIMEOUT\+\_\+\+SECONDS}})
+\begin{DoxyCompactList}\small\item\em Ожидает доступности данных для чтения \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classConnectionHandler_a8f8dd1422a10452a1ff0ac0ed79f2d07}{receive\+With\+Timeout}} (void $\ast$buffer, size\+\_\+t size, int timeout\+Seconds=\mbox{\hyperlink{classConnectionHandler_a5c3a12f5481dd3940442c1e8e219c46f}{TIMEOUT\+\_\+\+SECONDS}})
+\begin{DoxyCompactList}\small\item\em Принимает данные с таймаутом \end{DoxyCompactList}\item 
+ssize\+\_\+t \mbox{\hyperlink{classConnectionHandler_a704566a84b6081b6719019e967a61f50}{recv\+With\+Timeout}} (void $\ast$buffer, size\+\_\+t size, int timeout\+Seconds=\mbox{\hyperlink{classConnectionHandler_a5c3a12f5481dd3940442c1e8e219c46f}{TIMEOUT\+\_\+\+SECONDS}})
+\begin{DoxyCompactList}\small\item\em Принимает данные с таймаутом (низкоуровневый метод) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classConnectionHandler_ad4b84e685d8ab5664e2e10030622d32b}\label{classConnectionHandler_ad4b84e685d8ab5664e2e10030622d32b}} 
+int {\bfseries client\+Socket}
+\begin{DoxyCompactList}\small\item\em Сокет клиентского соединения \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classConnectionHandler_a69364684104263edae0ac7c9e3530a4a}\label{classConnectionHandler_a69364684104263edae0ac7c9e3530a4a}} 
+\mbox{\hyperlink{classClientDatabase}{Client\+Database}} \& {\bfseries client\+DB}
+\begin{DoxyCompactList}\small\item\em Ссылка на базу данных пользователей \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classConnectionHandler_a0dac158a33237a8d7253ae7eb2e8efa8}\label{classConnectionHandler_a0dac158a33237a8d7253ae7eb2e8efa8}} 
+\mbox{\hyperlink{classLogger}{Logger}} \& {\bfseries logger}
+\begin{DoxyCompactList}\small\item\em Ссылка на логгер \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classConnectionHandler_ac8495ca1c3f554c5e5e7692afa22d1a3}\label{classConnectionHandler_ac8495ca1c3f554c5e5e7692afa22d1a3}} 
+sockaddr\+\_\+in {\bfseries client\+Addr}
+\begin{DoxyCompactList}\small\item\em Адрес клиента \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые статические данные}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classConnectionHandler_a5c3a12f5481dd3940442c1e8e219c46f}\label{classConnectionHandler_a5c3a12f5481dd3940442c1e8e219c46f}} 
+static constexpr int {\bfseries TIMEOUT\+\_\+\+SECONDS} = 5
+\begin{DoxyCompactList}\small\item\em Таймаут операций в секундах \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для обработки клиентских соединений 
+
+Обрабатывает отдельное клиентское соединение, включая аутентификацию, прием и обработку данных, отправку результатов. 
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classConnectionHandler_afa39603c5c4da29a9d77d8264f2a9640}\label{classConnectionHandler_afa39603c5c4da29a9d77d8264f2a9640}} 
+\index{ConnectionHandler@{ConnectionHandler}!ConnectionHandler@{ConnectionHandler}}
+\index{ConnectionHandler@{ConnectionHandler}!ConnectionHandler@{ConnectionHandler}}
+\doxysubsubsection{\texorpdfstring{ConnectionHandler()}{ConnectionHandler()}}
+{\footnotesize\ttfamily Connection\+Handler\+::\+Connection\+Handler (\begin{DoxyParamCaption}\item[{int}]{socket,  }\item[{\mbox{\hyperlink{classClientDatabase}{Client\+Database}} \&}]{db,  }\item[{\mbox{\hyperlink{classLogger}{Logger}} \&}]{log,  }\item[{const sockaddr\+\_\+in \&}]{addr }\end{DoxyParamCaption})}
+
+
+
+Конструктор класса \mbox{\hyperlink{classConnectionHandler}{Connection\+Handler}}. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em socket} & Сокет клиентского соединения \\
+\hline
+{\em db} & Ссылка на базу данных пользователей \\
+\hline
+{\em log} & Ссылка на логгер \\
+\hline
+{\em addr} & Адрес клиента \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classConnectionHandler_ab4c56449df7516ed823291285511f375}\label{classConnectionHandler_ab4c56449df7516ed823291285511f375}} 
+\index{ConnectionHandler@{ConnectionHandler}!authenticateClient@{authenticateClient}}
+\index{authenticateClient@{authenticateClient}!ConnectionHandler@{ConnectionHandler}}
+\doxysubsubsection{\texorpdfstring{authenticateClient()}{authenticateClient()}}
+{\footnotesize\ttfamily bool Connection\+Handler\+::authenticate\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Выполняет аутентификацию клиента 
+
+\begin{DoxyReturn}{Возвращает}
+true если аутентификация успешна, false в противном случае
+
+true если аутентификация успешна, false в противном случае
+\end{DoxyReturn}
+Процесс аутентификации\+:
+\begin{DoxyEnumerate}
+\item Получение логина от клиента
+\item Генерация и отправка соли
+\item Получение хеша пароля
+\item Проверка хеша с использованием базы данных 
+\end{DoxyEnumerate}\mbox{\Hypertarget{classConnectionHandler_a78283195aac36509f85f204ba2b802a2}\label{classConnectionHandler_a78283195aac36509f85f204ba2b802a2}} 
+\index{ConnectionHandler@{ConnectionHandler}!handleConnection@{handleConnection}}
+\index{handleConnection@{handleConnection}!ConnectionHandler@{ConnectionHandler}}
+\doxysubsubsection{\texorpdfstring{handleConnection()}{handleConnection()}}
+{\footnotesize\ttfamily void Connection\+Handler\+::handle\+Connection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Обрабатывает клиентское соединение 
+
+Выполняет аутентификацию и обработку данных, затем закрывает соединение.
+
+Основной метод обработки соединения\+:
+\begin{DoxyEnumerate}
+\item Установка таймаутов на сокет
+\item Аутентификация клиента
+\item Обработка данных
+\item Закрытие соединения 
+\end{DoxyEnumerate}\mbox{\Hypertarget{classConnectionHandler_a4451a3eb3bbbb032e955982554288b8a}\label{classConnectionHandler_a4451a3eb3bbbb032e955982554288b8a}} 
+\index{ConnectionHandler@{ConnectionHandler}!processData@{processData}}
+\index{processData@{processData}!ConnectionHandler@{ConnectionHandler}}
+\doxysubsubsection{\texorpdfstring{processData()}{processData()}}
+{\footnotesize\ttfamily bool Connection\+Handler\+::process\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Обрабатывает данные от клиента 
+
+\begin{DoxyReturn}{Возвращает}
+true если обработка успешна, false в противном случае
+
+true если обработка успешна, false в противном случае
+\end{DoxyReturn}
+Процесс обработки данных\+:
+\begin{DoxyEnumerate}
+\item Получение количества векторов
+\item Для каждого вектора\+:
+\begin{DoxyItemize}
+\item Получение размера вектора
+\item Получение значений вектора
+\item Вычисление среднего значения
+\item Отправка результата 
+\end{DoxyItemize}
+\end{DoxyEnumerate}\mbox{\Hypertarget{classConnectionHandler_a2723e038c0973f87b6b06921bf7d9984}\label{classConnectionHandler_a2723e038c0973f87b6b06921bf7d9984}} 
+\index{ConnectionHandler@{ConnectionHandler}!receiveExactly@{receiveExactly}}
+\index{receiveExactly@{receiveExactly}!ConnectionHandler@{ConnectionHandler}}
+\doxysubsubsection{\texorpdfstring{receiveExactly()}{receiveExactly()}}
+{\footnotesize\ttfamily bool Connection\+Handler\+::receive\+Exactly (\begin{DoxyParamCaption}\item[{void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Принимает точное количество байт 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em buffer} & Буфер для приема данных \\
+\hline
+{\em size} & Количество байт для приема \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если прием успешен, false в противном случае 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classConnectionHandler_a8f8dd1422a10452a1ff0ac0ed79f2d07}\label{classConnectionHandler_a8f8dd1422a10452a1ff0ac0ed79f2d07}} 
+\index{ConnectionHandler@{ConnectionHandler}!receiveWithTimeout@{receiveWithTimeout}}
+\index{receiveWithTimeout@{receiveWithTimeout}!ConnectionHandler@{ConnectionHandler}}
+\doxysubsubsection{\texorpdfstring{receiveWithTimeout()}{receiveWithTimeout()}}
+{\footnotesize\ttfamily bool Connection\+Handler\+::receive\+With\+Timeout (\begin{DoxyParamCaption}\item[{void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size,  }\item[{int}]{timeout\+Seconds = {\ttfamily \mbox{\hyperlink{classConnectionHandler_a5c3a12f5481dd3940442c1e8e219c46f}{TIMEOUT\+\_\+\+SECONDS}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Принимает данные с таймаутом 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em buffer} & Буфер для приема данных \\
+\hline
+{\em size} & Количество байт для приема \\
+\hline
+{\em timeout\+Seconds} & Таймаут в секундах \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если прием успешен, false в противном случае
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Аргументы}
+{\em buffer} & Буфер для приема данных \\
+\hline
+{\em size} & Количество байт для приема \\
+\hline
+{\em timeout\+Seconds} & Таймаут в секундах \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если прием успешен, false в противном случае
+\end{DoxyReturn}
+Гарантированно принимает указанное количество байт или возвращает ошибку. \mbox{\Hypertarget{classConnectionHandler_a704566a84b6081b6719019e967a61f50}\label{classConnectionHandler_a704566a84b6081b6719019e967a61f50}} 
+\index{ConnectionHandler@{ConnectionHandler}!recvWithTimeout@{recvWithTimeout}}
+\index{recvWithTimeout@{recvWithTimeout}!ConnectionHandler@{ConnectionHandler}}
+\doxysubsubsection{\texorpdfstring{recvWithTimeout()}{recvWithTimeout()}}
+{\footnotesize\ttfamily ssize\+\_\+t Connection\+Handler\+::recv\+With\+Timeout (\begin{DoxyParamCaption}\item[{void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size,  }\item[{int}]{timeout\+Seconds = {\ttfamily \mbox{\hyperlink{classConnectionHandler_a5c3a12f5481dd3940442c1e8e219c46f}{TIMEOUT\+\_\+\+SECONDS}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Принимает данные с таймаутом (низкоуровневый метод) 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em buffer} & Буфер для приема данных \\
+\hline
+{\em size} & Максимальный размер буфера \\
+\hline
+{\em timeout\+Seconds} & Таймаут в секундах \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Количество принятых байт или -\/1 при ошибке 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classConnectionHandler_a1b6ae6f898c8abbed1d97383244b72bd}\label{classConnectionHandler_a1b6ae6f898c8abbed1d97383244b72bd}} 
+\index{ConnectionHandler@{ConnectionHandler}!sendExactly@{sendExactly}}
+\index{sendExactly@{sendExactly}!ConnectionHandler@{ConnectionHandler}}
+\doxysubsubsection{\texorpdfstring{sendExactly()}{sendExactly()}}
+{\footnotesize\ttfamily bool Connection\+Handler\+::send\+Exactly (\begin{DoxyParamCaption}\item[{const void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Отправляет точное количество байт 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em buffer} & Буфер с данными для отправки \\
+\hline
+{\em size} & Количество байт для отправки \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если отправка успешна, false в противном случае
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Аргументы}
+{\em buffer} & Буфер с данными для отправки \\
+\hline
+{\em size} & Количество байт для отправки \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если отправка успешна, false в противном случае
+\end{DoxyReturn}
+Гарантированно отправляет указанное количество байт или возвращает ошибку. \mbox{\Hypertarget{classConnectionHandler_a339759217962bc4f47d1cf0fe1c641c5}\label{classConnectionHandler_a339759217962bc4f47d1cf0fe1c641c5}} 
+\index{ConnectionHandler@{ConnectionHandler}!waitForData@{waitForData}}
+\index{waitForData@{waitForData}!ConnectionHandler@{ConnectionHandler}}
+\doxysubsubsection{\texorpdfstring{waitForData()}{waitForData()}}
+{\footnotesize\ttfamily bool Connection\+Handler\+::wait\+For\+Data (\begin{DoxyParamCaption}\item[{int}]{timeout\+Seconds = {\ttfamily \mbox{\hyperlink{classConnectionHandler_a5c3a12f5481dd3940442c1e8e219c46f}{TIMEOUT\+\_\+\+SECONDS}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ожидает доступности данных для чтения 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em timeout\+Seconds} & Таймаут в секундах \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если данные доступны, false при таймауте или ошибке
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Аргументы}
+{\em timeout\+Seconds} & Таймаут в секундах \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если данные доступны, false при таймауте или ошибке
+\end{DoxyReturn}
+Использует системный вызов select для ожидания данных с таймаутом. 
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ConnectionHandler_8h}{Connection\+Handler.\+h}}\item 
+\mbox{\hyperlink{ConnectionHandler_8cpp}{Connection\+Handler.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,46 @@
+\hypertarget{ConnectionHandler_8h}{}\doxysection{Файл Connection\+Handler.\+h}
+\label{ConnectionHandler_8h}\index{ConnectionHandler.h@{ConnectionHandler.h}}
+
+
+Заголовочный файл класса \mbox{\hyperlink{classConnectionHandler}{Connection\+Handler}} для обработки клиентских соединений  
+
+
+{\ttfamily \#include $<$sys/socket.\+h$>$}\newline
+{\ttfamily \#include $<$netinet/in.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$arpa/inet.\+h$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$sys/select.\+h$>$}\newline
+{\ttfamily \#include $<$sys/time.\+h$>$}\newline
+{\ttfamily \#include $<$cerrno$>$}\newline
+{\ttfamily \#include \char`\"{}Client\+Database.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Authenticator.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Data\+Processor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Logger.\+h\char`\"{}}\newline
+Граф включаемых заголовочных файлов для Connection\+Handler.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ConnectionHandler_8h__incl}
+\end{center}
+\end{figure}
+Граф файлов, в которые включается этот файл\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{ConnectionHandler_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classConnectionHandler}{Connection\+Handler}}
+\begin{DoxyCompactList}\small\item\em Класс для обработки клиентских соединений \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Заголовочный файл класса \mbox{\hyperlink{classConnectionHandler}{Connection\+Handler}} для обработки клиентских соединений 
+
+Содержит объявление класса \mbox{\hyperlink{classConnectionHandler}{Connection\+Handler}}, который обрабатывает отдельные клиентские соединения, включая аутентификацию и обработку данных. 

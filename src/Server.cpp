@@ -1,15 +1,34 @@
-// Server.cpp
+/**
+ * @file Server.cpp
+ * @brief Реализация класса Server
+ */
+
 #include "Server.h"
 #include <iostream>
 #include <signal.h>
 #include <memory>
 
+/**
+ * @brief Конструктор класса Server
+ */
 Server::Server() : running(false), serverSocket(-1) {}
 
+/**
+ * @brief Деструктор класса Server
+ * 
+ * Автоматически останавливает сервер при уничтожении объекта.
+ */
 Server::~Server() {
     stop();
 }
 
+/**
+ * @brief Инициализирует сокет сервера
+ * @return true если инициализация успешна, false в противном случае
+ * 
+ * Создает сокет, устанавливает опции, привязывает к порту
+ * и переводит в режим прослушивания.
+ */
 bool Server::initializeSocket() {
     serverSocket = socket(AF_INET, SOCK_STREAM, 0);
     if (serverSocket == -1) {
@@ -43,6 +62,12 @@ bool Server::initializeSocket() {
     return true;
 }
 
+/**
+ * @brief Принимает входящие соединения
+ * 
+ * Запускает бесконечный цикл приема соединений, каждое соединение
+ * обрабатывается в отдельном потоке с помощью ConnectionHandler.
+ */
 void Server::acceptConnections() {
     while (running) {
         sockaddr_in clientAddr;
@@ -65,6 +90,19 @@ void Server::acceptConnections() {
     }
 }
 
+/**
+ * @brief Запускает сервер
+ * @param argc Количество аргументов командной строки
+ * @param argv Массив аргументов командной строки
+ * @return true если запуск успешен, false в противном случае
+ * 
+ * Последовательность запуска:
+ * 1. Парсинг параметров командной строки
+ * 2. Инициализация логгера
+ * 3. Загрузка базы данных пользователей
+ * 4. Инициализация сокета
+ * 5. Запуск цикла приема соединений
+ */
 bool Server::start(int argc, char* argv[]) {
     // Парсим командную строку
     if (!config.parseCommandLine(argc, argv)) {
@@ -99,6 +137,12 @@ bool Server::start(int argc, char* argv[]) {
     return true;
 }
 
+/**
+ * @brief Останавливает сервер
+ * 
+ * Устанавливает флаг running в false, закрывает сокет сервера
+ * и логгер. Поток acceptConnections автоматически завершится.
+ */
 void Server::stop() {
     if (running) {
         running = false;

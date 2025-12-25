@@ -1,0 +1,31 @@
+\hypertarget{Logger_8h_source}{}\doxysection{Logger.\+h}
+\mbox{\hyperlink{Logger_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <mutex>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <chrono>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <iomanip>}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{24 \textcolor{keyword}{class }\mbox{\hyperlink{classLogger}{Logger}} \{}
+\DoxyCodeLine{25 \textcolor{keyword}{private}:}
+\DoxyCodeLine{26     std::ofstream \mbox{\hyperlink{classLogger_acc94bd19d6a022e574a5733c87fed67a}{logFile}};    }
+\DoxyCodeLine{27     std::mutex \mbox{\hyperlink{classLogger_a1a7f5dc4185f8bff7778f1d6aa8525a9}{logMutex}};      }
+\DoxyCodeLine{28     std::string \mbox{\hyperlink{classLogger_a7d2eb96ffbb512b79834c8d7313c69b7}{filename}};     }
+\DoxyCodeLine{29 }
+\DoxyCodeLine{34     std::string \mbox{\hyperlink{classLogger_a8fe26a13346f80c03fff0667ad8692fc}{getCurrentTime}}();}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{keyword}{public}:}
+\DoxyCodeLine{42     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classLogger_afcaee25f0f37b6d6b7bdc467d493bfbd}{initialize}}(\textcolor{keyword}{const} std::string\& \mbox{\hyperlink{classLogger_a7d2eb96ffbb512b79834c8d7313c69b7}{filename}});}
+\DoxyCodeLine{43     }
+\DoxyCodeLine{47     \textcolor{keywordtype}{void} \mbox{\hyperlink{classLogger_afee2bab560c2db0190c980884d33868c}{close}}();}
+\DoxyCodeLine{48     }
+\DoxyCodeLine{54     \textcolor{keywordtype}{void} \mbox{\hyperlink{classLogger_a97c1374c260c397ea60c90308bb4781e}{logError}}(\textcolor{keyword}{const} std::string\& message, \textcolor{keywordtype}{bool} critical = \textcolor{keyword}{false});}
+\DoxyCodeLine{55     }
+\DoxyCodeLine{60     \textcolor{keywordtype}{void} \mbox{\hyperlink{classLogger_a3b2e97470572358030fa427c649cf8d5}{logInfo}}(\textcolor{keyword}{const} std::string\& message);}
+\DoxyCodeLine{61 \};}
+
+\end{DoxyCode}

@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['calculateaverage_0',['calculateAverage',['../classDataProcessor.html#a375271bf44906652e88db977b4379af7',1,'DataProcessor']]],
+  ['clientaddr_1',['clientAddr',['../classConnectionHandler.html#ac8495ca1c3f554c5e5e7692afa22d1a3',1,'ConnectionHandler']]],
+  ['clientdatabase_2',['ClientDatabase',['../classClientDatabase.html',1,'']]],
+  ['clientdatabase_2ecpp_3',['ClientDatabase.cpp',['../ClientDatabase_8cpp.html',1,'']]],
+  ['clientdatabase_2eh_4',['ClientDatabase.h',['../ClientDatabase_8h.html',1,'']]],
+  ['clientdb_5',['clientDB',['../classServer.html#a7360c0a0ffcb1c046f5c076663097d09',1,'Server::clientDB()'],['../classConnectionHandler.html#a69364684104263edae0ac7c9e3530a4a',1,'ConnectionHandler::clientDB()']]],
+  ['clientdbfile_6',['clientDBFile',['../classConfiguration.html#a1bc13dbd31f5327a16498de782c3d7a5',1,'Configuration']]],
+  ['clientsocket_7',['clientSocket',['../classConnectionHandler.html#ad4b84e685d8ab5664e2e10030622d32b',1,'ConnectionHandler']]],
+  ['close_8',['close',['../classLogger.html#afee2bab560c2db0190c980884d33868c',1,'Logger']]],
+  ['config_9',['config',['../classServer.html#a08b27061b1d869d9a547248429b288e6',1,'Server']]],
+  ['configuration_10',['Configuration',['../classConfiguration.html',1,'']]],
+  ['configuration_2ecpp_11',['Configuration.cpp',['../Configuration_8cpp.html',1,'']]],
+  ['configuration_2eh_12',['Configuration.h',['../Configuration_8h.html',1,'']]],
+  ['connectionhandler_13',['ConnectionHandler',['../classConnectionHandler.html',1,'ConnectionHandler'],['../classConnectionHandler.html#afa39603c5c4da29a9d77d8264f2a9640',1,'ConnectionHandler::ConnectionHandler()']]],
+  ['connectionhandler_2ecpp_14',['ConnectionHandler.cpp',['../ConnectionHandler_8cpp.html',1,'']]],
+  ['connectionhandler_2eh_15',['ConnectionHandler.h',['../ConnectionHandler_8h.html',1,'']]]
+];

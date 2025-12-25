@@ -1,12 +1,30 @@
+/**
+ * @file ConnectionHandler.cpp
+ * @brief Реализация класса ConnectionHandler
+ */
+
 #include "ConnectionHandler.h"
 #include <iostream>
 #include <vector>
 #include <cstring>
 
+/**
+ * @brief Конструктор класса ConnectionHandler
+ * @param socket Сокет клиентского соединения
+ * @param db Ссылка на базу данных пользователей
+ * @param log Ссылка на логгер
+ * @param addr Адрес клиента
+ */
 ConnectionHandler::ConnectionHandler(int socket, ClientDatabase& db, Logger& log, const sockaddr_in& addr)
     : clientSocket(socket), clientDB(db), logger(log), clientAddr(addr) {}
 
-// Ожидание данных с таймаутом
+/**
+ * @brief Ожидает доступности данных для чтения
+ * @param timeoutSeconds Таймаут в секундах
+ * @return true если данные доступны, false при таймауте или ошибке
+ * 
+ * Использует системный вызов select для ожидания данных с таймаутом.
+ */
 bool ConnectionHandler::waitForData(int timeoutSeconds) {
     fd_set readfds;
     FD_ZERO(&readfds);
@@ -32,7 +50,13 @@ bool ConnectionHandler::waitForData(int timeoutSeconds) {
     return FD_ISSET(clientSocket, &readfds);
 }
 
-// Получение данных с таймаутом
+/**
+ * @brief Принимает данные с таймаутом (низкоуровневый метод)
+ * @param buffer Буфер для приема данных
+ * @param size Максимальный размер буфера
+ * @param timeoutSeconds Таймаут в секундах
+ * @return Количество принятых байт или -1 при ошибке
+ */
 ssize_t ConnectionHandler::recvWithTimeout(void* buffer, size_t size, int timeoutSeconds) {
     if (!waitForData(timeoutSeconds)) {
         return -1;
@@ -46,7 +70,15 @@ ssize_t ConnectionHandler::recvWithTimeout(void* buffer, size_t size, int timeou
     return received;
 }
 
-// Получение точного количества байт с таймаутом
+/**
+ * @brief Принимает данные с таймаутом
+ * @param buffer Буфер для приема данных
+ * @param size Количество байт для приема
+ * @param timeoutSeconds Таймаут в секундах
+ * @return true если прием успешен, false в противном случае
+ * 
+ * Гарантированно принимает указанное количество байт или возвращает ошибку.
+ */
 bool ConnectionHandler::receiveWithTimeout(void* buffer, size_t size, int timeoutSeconds) {
     char* ptr = static_cast<char*>(buffer);
     size_t totalReceived = 0;
@@ -80,11 +112,24 @@ bool ConnectionHandler::receiveWithTimeout(void* buffer, size_t size, int timeou
     return true;
 }
 
-// Модифицируем существующие методы для использования таймаута
+/**
+ * @brief Принимает точное количество байт
+ * @param buffer Буфер для приема данных
+ * @param size Количество байт для приема
+ * @return true если прием успешен, false в противном случае
+ */
 bool ConnectionHandler::receiveExactly(void* buffer, size_t size) {
     return receiveWithTimeout(buffer, size, TIMEOUT_SECONDS);
 }
 
+/**
+ * @brief Отправляет точное количество байт
+ * @param buffer Буфер с данными для отправки
+ * @param size Количество байт для отправки
+ * @return true если отправка успешна, false в противном случае
+ * 
+ * Гарантированно отправляет указанное количество байт или возвращает ошибку.
+ */
 bool ConnectionHandler::sendExactly(const void* buffer, size_t size) {
     const char* ptr = static_cast<const char*>(buffer);
     size_t totalSent = 0;
@@ -107,6 +152,16 @@ bool ConnectionHandler::sendExactly(const void* buffer, size_t size) {
     return true;
 }
 
+/**
+ * @brief Выполняет аутентификацию клиента
+ * @return true если аутентификация успешна, false в противном случае
+ * 
+ * Процесс аутентификации:
+ * 1. Получение логина от клиента
+ * 2. Генерация и отправка соли
+ * 3. Получение хеша пароля
+ * 4. Проверка хеша с использованием базы данных
+ */
 bool ConnectionHandler::authenticateClient() {
     std::string clientIP = inet_ntoa(clientAddr.sin_addr);
     
@@ -173,6 +228,18 @@ bool ConnectionHandler::authenticateClient() {
     return true;
 }
 
+/**
+ * @brief Обрабатывает данные от клиента
+ * @return true если обработка успешна, false в противном случае
+ * 
+ * Процесс обработки данных:
+ * 1. Получение количества векторов
+ * 2. Для каждого вектора:
+ *    - Получение размера вектора
+ *    - Получение значений вектора
+ *    - Вычисление среднего значения
+ *    - Отправка результата
+ */
 bool ConnectionHandler::processData() {
     try {
         // Получаем количество векторов с таймаутом
@@ -216,6 +283,15 @@ bool ConnectionHandler::processData() {
     }
 }
 
+/**
+ * @brief Обрабатывает клиентское соединение
+ * 
+ * Основной метод обработки соединения:
+ * 1. Установка таймаутов на сокет
+ * 2. Аутентификация клиента
+ * 3. Обработка данных
+ * 4. Закрытие соединения
+ */
 void ConnectionHandler::handleConnection() {
     std::string clientIP = inet_ntoa(clientAddr.sin_addr);
     logger.logInfo("Новое подключение от " + clientIP);

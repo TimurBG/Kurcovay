@@ -1,0 +1,147 @@
+\hypertarget{classAuthenticator}{}\doxysection{Класс Authenticator}
+\label{classAuthenticator}\index{Authenticator@{Authenticator}}
+
+
+Класс для работы с аутентификацией пользователей  
+
+
+
+
+{\ttfamily \#include $<$Authenticator.\+h$>$}
+
+\doxysubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{classAuthenticator_aeb0de37f54c3fad7f3c5b5a6a3b09d91}{generate\+Salt}} ()
+\begin{DoxyCompactList}\small\item\em Генерирует случайную соль для хеширования пароля \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{classAuthenticator_a34583c4f7f37c01b8fa607228eef34b8}{hash\+Password}} (const std\+::string \&salt, const std\+::string \&password)
+\begin{DoxyCompactList}\small\item\em Хеширует пароль с использованием соли \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classAuthenticator_a42d5d7b6a9a64fde47c7c096c09ff19c}{verify\+Password}} (const std\+::string \&password\+Hash, const std\+::string \&salt, const std\+::string \&stored\+Password)
+\begin{DoxyCompactList}\small\item\em Проверяет корректность пароля \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{classAuthenticator_a5b31308cdff8866f19a732e431620c86}{to\+Hex\+String}} (const std\+::string \&binary)
+\begin{DoxyCompactList}\small\item\em Преобразует бинарные данные в шестнадцатеричную строку \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые статические данные}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAuthenticator_a6d293bd6325f24b4c330fd629ca6fd26}\label{classAuthenticator_a6d293bd6325f24b4c330fd629ca6fd26}} 
+static constexpr int {\bfseries SALT\+\_\+\+SIZE} = 8
+\begin{DoxyCompactList}\small\item\em Размер соли в байтах (64 бита) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для работы с аутентификацией пользователей 
+
+Предоставляет статические методы для генерации соли, хеширования паролей и проверки аутентификационных данных с использованием алгоритма MD5. 
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classAuthenticator_aeb0de37f54c3fad7f3c5b5a6a3b09d91}\label{classAuthenticator_aeb0de37f54c3fad7f3c5b5a6a3b09d91}} 
+\index{Authenticator@{Authenticator}!generateSalt@{generateSalt}}
+\index{generateSalt@{generateSalt}!Authenticator@{Authenticator}}
+\doxysubsubsection{\texorpdfstring{generateSalt()}{generateSalt()}}
+{\footnotesize\ttfamily std\+::string Authenticator\+::generate\+Salt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Генерирует случайную соль для хеширования пароля 
+
+\begin{DoxyReturn}{Возвращает}
+Строка с шестнадцатеричным представлением соли
+
+Строка с шестнадцатеричным представлением соли
+\end{DoxyReturn}
+Использует криптографически безопасный генератор случайных чисел для создания 8-\/байтовой (64-\/битной) соли. \mbox{\Hypertarget{classAuthenticator_a34583c4f7f37c01b8fa607228eef34b8}\label{classAuthenticator_a34583c4f7f37c01b8fa607228eef34b8}} 
+\index{Authenticator@{Authenticator}!hashPassword@{hashPassword}}
+\index{hashPassword@{hashPassword}!Authenticator@{Authenticator}}
+\doxysubsubsection{\texorpdfstring{hashPassword()}{hashPassword()}}
+{\footnotesize\ttfamily std\+::string Authenticator\+::hash\+Password (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{salt,  }\item[{const std\+::string \&}]{password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Хеширует пароль с использованием соли 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em salt} & Соль для хеширования \\
+\hline
+{\em password} & Пароль пользователя \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Хеш пароля в шестнадцатеричном формате
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Аргументы}
+{\em salt} & Соль для хеширования \\
+\hline
+{\em password} & Пароль пользователя \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Хеш пароля в шестнадцатеричном формате
+\end{DoxyReturn}
+Использует алгоритм MD5 для создания хеша из конкатенации соли и пароля. Результат возвращается в виде шестнадцатеричной строки. \mbox{\Hypertarget{classAuthenticator_a5b31308cdff8866f19a732e431620c86}\label{classAuthenticator_a5b31308cdff8866f19a732e431620c86}} 
+\index{Authenticator@{Authenticator}!toHexString@{toHexString}}
+\index{toHexString@{toHexString}!Authenticator@{Authenticator}}
+\doxysubsubsection{\texorpdfstring{toHexString()}{toHexString()}}
+{\footnotesize\ttfamily std\+::string Authenticator\+::to\+Hex\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{binary }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Преобразует бинарные данные в шестнадцатеричную строку 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em binary} & Бинарные данные \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Шестнадцатеричное представление данных
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Аргументы}
+{\em binary} & Бинарные данные \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Шестнадцатеричное представление данных
+\end{DoxyReturn}
+Каждый байт преобразуется в два шестнадцатеричных символа. Результат дополняется слева нулями до 16 символов. \mbox{\Hypertarget{classAuthenticator_a42d5d7b6a9a64fde47c7c096c09ff19c}\label{classAuthenticator_a42d5d7b6a9a64fde47c7c096c09ff19c}} 
+\index{Authenticator@{Authenticator}!verifyPassword@{verifyPassword}}
+\index{verifyPassword@{verifyPassword}!Authenticator@{Authenticator}}
+\doxysubsubsection{\texorpdfstring{verifyPassword()}{verifyPassword()}}
+{\footnotesize\ttfamily bool Authenticator\+::verify\+Password (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{password\+Hash,  }\item[{const std\+::string \&}]{salt,  }\item[{const std\+::string \&}]{stored\+Password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Проверяет корректность пароля 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em password\+Hash} & Хеш пароля для проверки \\
+\hline
+{\em salt} & Соль, использованная при хешировании \\
+\hline
+{\em stored\+Password} & Оригинальный пароль из базы данных \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если пароль верный, false в противном случае
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Аргументы}
+{\em password\+Hash} & Хеш пароля для проверки \\
+\hline
+{\em salt} & Соль, использованная при хешировании \\
+\hline
+{\em stored\+Password} & Оригинальный пароль из базы данных \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если пароль верный, false в противном случае
+\end{DoxyReturn}
+Вычисляет хеш от хранимого пароля с переданной солью и сравнивает с предоставленным хешем. Сравнение выполняется без учета регистра. 
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Authenticator_8h}{Authenticator.\+h}}\item 
+\mbox{\hyperlink{Authenticator_8cpp}{Authenticator.\+cpp}}\end{DoxyCompactItemize}

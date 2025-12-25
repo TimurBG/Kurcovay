@@ -1,0 +1,30 @@
+\hypertarget{Authenticator_8h_source}{}\doxysection{Authenticator.\+h}
+\mbox{\hyperlink{Authenticator_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{comment}{// Определяем для использования MD5 (как требуется в ТЗ)}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#define CRYPTOPP\_ENABLE\_NAMESPACE\_WEAK 1}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <cryptopp/md5.h>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <cryptopp/hex.h>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <cryptopp/osrng.h>}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{26 \textcolor{keyword}{class }\mbox{\hyperlink{classAuthenticator}{Authenticator}} \{}
+\DoxyCodeLine{27 \textcolor{keyword}{private}:}
+\DoxyCodeLine{28     \textcolor{keyword}{static} \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} \mbox{\hyperlink{classAuthenticator_a6d293bd6325f24b4c330fd629ca6fd26}{SALT\_SIZE}} = 8; }
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{keyword}{public}:}
+\DoxyCodeLine{35     \textcolor{keyword}{static} std::string \mbox{\hyperlink{classAuthenticator_aeb0de37f54c3fad7f3c5b5a6a3b09d91}{generateSalt}}();}
+\DoxyCodeLine{36     }
+\DoxyCodeLine{43     \textcolor{keyword}{static} std::string \mbox{\hyperlink{classAuthenticator_a34583c4f7f37c01b8fa607228eef34b8}{hashPassword}}(\textcolor{keyword}{const} std::string\& salt, \textcolor{keyword}{const} std::string\& password);}
+\DoxyCodeLine{44     }
+\DoxyCodeLine{52     \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classAuthenticator_a42d5d7b6a9a64fde47c7c096c09ff19c}{verifyPassword}}(\textcolor{keyword}{const} std::string\& passwordHash, }
+\DoxyCodeLine{53                               \textcolor{keyword}{const} std::string\& salt, \textcolor{keyword}{const} std::string\& storedPassword);}
+\DoxyCodeLine{54     }
+\DoxyCodeLine{60     \textcolor{keyword}{static} std::string \mbox{\hyperlink{classAuthenticator_a5b31308cdff8866f19a732e431620c86}{toHexString}}(\textcolor{keyword}{const} std::string\& binary);}
+\DoxyCodeLine{61 \};}
+
+\end{DoxyCode}

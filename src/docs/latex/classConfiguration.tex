@@ -1,0 +1,123 @@
+\hypertarget{classConfiguration}{}\doxysection{Класс Configuration}
+\label{classConfiguration}\index{Configuration@{Configuration}}
+
+
+Класс для управления конфигурацией сервера  
+
+
+
+
+{\ttfamily \#include $<$Configuration.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classConfiguration_a0e10c2a9f2e2d3070b8054ab2bab7c28}{parse\+Command\+Line}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Парсит параметры командной строки \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classConfiguration_a38b51ea2503eb2f27eda3d79b7b9c0f8}{get\+Client\+DBFile}} () const
+\begin{DoxyCompactList}\small\item\em Получает путь к файлу базы клиентов \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classConfiguration_ac12322defbae18eaf9d5c3e25690a72b}{get\+Log\+File}} () const
+\begin{DoxyCompactList}\small\item\em Получает путь к файлу журнала \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classConfiguration_ab34eb25aa1e175c7ac8323300b298a8a}{get\+Port}} () const
+\begin{DoxyCompactList}\small\item\em Получает номер порта сервера \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classConfiguration_aeb0ae016dba77df19b49fd7859bfd3e8}\label{classConfiguration_aeb0ae016dba77df19b49fd7859bfd3e8}} 
+static void {\bfseries print\+Help} ()
+\begin{DoxyCompactList}\small\item\em Выводит справку по использованию программы \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classConfiguration_a1bc13dbd31f5327a16498de782c3d7a5}\label{classConfiguration_a1bc13dbd31f5327a16498de782c3d7a5}} 
+std\+::string {\bfseries client\+DBFile} = \char`\"{}./etc/vcalc.\+conf\char`\"{}
+\begin{DoxyCompactList}\small\item\em Файл базы клиентов \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classConfiguration_a70b514aa2d44916b3888badf7e3827ed}\label{classConfiguration_a70b514aa2d44916b3888badf7e3827ed}} 
+std\+::string {\bfseries log\+File} = \char`\"{}./var/log/vcalc.\+log\char`\"{}
+\begin{DoxyCompactList}\small\item\em Файл журнала \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classConfiguration_af31ae5c558fad41f14e607712ac12fea}\label{classConfiguration_af31ae5c558fad41f14e607712ac12fea}} 
+int {\bfseries port} = 33333
+\begin{DoxyCompactList}\small\item\em Порт сервера \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для управления конфигурацией сервера 
+
+Предоставляет методы для парсинга параметров командной строки и хранения настроек сервера. 
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classConfiguration_a38b51ea2503eb2f27eda3d79b7b9c0f8}\label{classConfiguration_a38b51ea2503eb2f27eda3d79b7b9c0f8}} 
+\index{Configuration@{Configuration}!getClientDBFile@{getClientDBFile}}
+\index{getClientDBFile@{getClientDBFile}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{getClientDBFile()}{getClientDBFile()}}
+{\footnotesize\ttfamily const std\+::string \& Configuration\+::get\+Client\+DBFile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Получает путь к файлу базы клиентов 
+
+\begin{DoxyReturn}{Возвращает}
+Путь к файлу базы клиентов 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classConfiguration_ac12322defbae18eaf9d5c3e25690a72b}\label{classConfiguration_ac12322defbae18eaf9d5c3e25690a72b}} 
+\index{Configuration@{Configuration}!getLogFile@{getLogFile}}
+\index{getLogFile@{getLogFile}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{getLogFile()}{getLogFile()}}
+{\footnotesize\ttfamily const std\+::string \& Configuration\+::get\+Log\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Получает путь к файлу журнала 
+
+\begin{DoxyReturn}{Возвращает}
+Путь к файлу журнала 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classConfiguration_ab34eb25aa1e175c7ac8323300b298a8a}\label{classConfiguration_ab34eb25aa1e175c7ac8323300b298a8a}} 
+\index{Configuration@{Configuration}!getPort@{getPort}}
+\index{getPort@{getPort}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{getPort()}{getPort()}}
+{\footnotesize\ttfamily int Configuration\+::get\+Port (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Получает номер порта сервера 
+
+\begin{DoxyReturn}{Возвращает}
+Номер порта 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classConfiguration_a0e10c2a9f2e2d3070b8054ab2bab7c28}\label{classConfiguration_a0e10c2a9f2e2d3070b8054ab2bab7c28}} 
+\index{Configuration@{Configuration}!parseCommandLine@{parseCommandLine}}
+\index{parseCommandLine@{parseCommandLine}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{parseCommandLine()}{parseCommandLine()}}
+{\footnotesize\ttfamily bool Configuration\+::parse\+Command\+Line (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Парсит параметры командной строки 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em argc} & Количество аргументов \\
+\hline
+{\em argv} & Массив аргументов \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если парсинг успешен, false в противном случае
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Аргументы}
+{\em argc} & Количество аргументов \\
+\hline
+{\em argv} & Массив аргументов \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если парсинг успешен, false в противном случае
+\end{DoxyReturn}
+Поддерживаемые параметры\+: -\/h, --help Показать справку -\/c, --config FILE Файл базы клиентов -\/l, --log FILE Файл журнала -\/p, --port PORT Порт сервера 
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Configuration_8h}{Configuration.\+h}}\item 
+\mbox{\hyperlink{Configuration_8cpp}{Configuration.\+cpp}}\end{DoxyCompactItemize}

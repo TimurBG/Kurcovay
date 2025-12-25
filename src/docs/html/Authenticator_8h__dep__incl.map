@@ -1,0 +1,9 @@
+<map id="Authenticator.h" name="Authenticator.h">
+<area shape="rect" id="node1" title="Заголовочный файл класса Authenticator для аутентификации пользователей" alt="" coords="98,5,219,32"/>
+<area shape="rect" id="node2" href="$Authenticator_8cpp.html" title="Реализация класса Authenticator." alt="" coords="5,80,141,107"/>
+<area shape="rect" id="node3" href="$ConnectionHandler_8h.html" title="Заголовочный файл класса ConnectionHandler для обработки клиентских соединений" alt="" coords="165,80,323,107"/>
+<area shape="rect" id="node4" href="$ConnectionHandler_8cpp.html" title="Реализация класса ConnectionHandler." alt="" coords="83,155,255,181"/>
+<area shape="rect" id="node5" href="$Server_8h.html" title="Заголовочный файл класса Server для управления сервером" alt="" coords="280,155,355,181"/>
+<area shape="rect" id="node6" href="$Server_8cpp.html" title="Реализация класса Server." alt="" coords="216,229,307,256"/>
+<area shape="rect" id="node7" href="$main_8cpp.html" title="Основной файл приложения сервера" alt="" coords="331,229,413,256"/>
+</map>

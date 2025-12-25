@@ -1,0 +1,82 @@
+\hypertarget{main_8cpp}{}\doxysection{Файл main.\+cpp}
+\label{main_8cpp}\index{main.cpp@{main.cpp}}
+
+
+Основной файл приложения сервера  
+
+
+{\ttfamily \#include \char`\"{}Server.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$csignal$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+Граф включаемых заголовочных файлов для main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8cpp_ad2e59c7203b3bddc1bc9a2224b52e8e7}{signal\+Handler}} (int signal)
+\begin{DoxyCompactList}\small\item\em Обработчик сигналов операционной системы \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Точка входа приложения \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Переменные}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8cpp_af570b242d81a3a3bf252f54c3ca0054b}\label{main_8cpp_af570b242d81a3a3bf252f54c3ca0054b}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classServer}{Server}} $>$ {\bfseries server}
+\begin{DoxyCompactList}\small\item\em Указатель на основной объект сервера \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Основной файл приложения сервера 
+
+Содержит точку входа приложения и обработчики сигналов. Управляет созданием и запуском основного объекта сервера. 
+
+\doxysubsection{Функции}
+\mbox{\Hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Точка входа приложения 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em argc} & Количество аргументов командной строки \\
+\hline
+{\em argv} & Массив аргументов командной строки \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Код завершения программы (0 -\/ успех, 1 -\/ ошибка)
+\end{DoxyReturn}
+Основная функция приложения\+:
+\begin{DoxyEnumerate}
+\item Устанавливает обработчики сигналов
+\item Создает объект сервера
+\item Запускает сервер
+\item Обрабатывает исключения 
+\end{DoxyEnumerate}\mbox{\Hypertarget{main_8cpp_ad2e59c7203b3bddc1bc9a2224b52e8e7}\label{main_8cpp_ad2e59c7203b3bddc1bc9a2224b52e8e7}} 
+\index{main.cpp@{main.cpp}!signalHandler@{signalHandler}}
+\index{signalHandler@{signalHandler}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{signalHandler()}{signalHandler()}}
+{\footnotesize\ttfamily void signal\+Handler (\begin{DoxyParamCaption}\item[{int}]{signal }\end{DoxyParamCaption})}
+
+
+
+Обработчик сигналов операционной системы 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em signal} & Номер полученного сигнала\\
+\hline
+\end{DoxyParams}
+Обрабатывает сигналы SIGINT (Ctrl+C) и SIGTERM для корректного завершения работы сервера. 

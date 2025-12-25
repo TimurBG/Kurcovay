@@ -1,0 +1,168 @@
+\begin{theindex}
+
+  \item {$\sim$Server}
+    \subitem {Server}, \hyperpage{24}
+
+  \indexspace
+
+  \item {acceptConnections}
+    \subitem {Server}, \hyperpage{24}
+  \item {authenticateClient}
+    \subitem {ConnectionHandler}, \hyperpage{14}
+  \item {Authenticator}, \hyperpage{5}
+    \subitem {generateSalt}, \hyperpage{5}
+    \subitem {hashPassword}, \hyperpage{6}
+    \subitem {toHexString}, \hyperpage{6}
+    \subitem {verifyPassword}, \hyperpage{7}
+  \item {Authenticator.cpp}, \hyperpage{27}
+  \item {Authenticator.h}, \hyperpage{27}
+
+  \indexspace
+
+  \item {calculateAverage}
+    \subitem {DataProcessor}, \hyperpage{19}
+  \item {ClientDatabase}, \hyperpage{8}
+    \subitem {getPassword}, \hyperpage{8}
+    \subitem {loadFromFile}, \hyperpage{9}
+    \subitem {userExists}, \hyperpage{9}
+  \item {ClientDatabase.cpp}, \hyperpage{29}
+  \item {ClientDatabase.h}, \hyperpage{30}
+  \item {Configuration}, \hyperpage{10}
+    \subitem {getClientDBFile}, \hyperpage{11}
+    \subitem {getLogFile}, \hyperpage{11}
+    \subitem {getPort}, \hyperpage{11}
+    \subitem {parseCommandLine}, \hyperpage{11}
+  \item {Configuration.cpp}, \hyperpage{31}
+  \item {Configuration.h}, \hyperpage{31}
+  \item {ConnectionHandler}, \hyperpage{12}
+    \subitem {authenticateClient}, \hyperpage{14}
+    \subitem {ConnectionHandler}, \hyperpage{14}
+    \subitem {handleConnection}, \hyperpage{14}
+    \subitem {processData}, \hyperpage{15}
+    \subitem {receiveExactly}, \hyperpage{15}
+    \subitem {receiveWithTimeout}, \hyperpage{16}
+    \subitem {recvWithTimeout}, \hyperpage{16}
+    \subitem {sendExactly}, \hyperpage{18}
+    \subitem {waitForData}, \hyperpage{18}
+  \item {ConnectionHandler.cpp}, \hyperpage{33}
+  \item {ConnectionHandler.h}, \hyperpage{33}
+
+  \indexspace
+
+  \item {DataProcessor}, \hyperpage{19}
+    \subitem {calculateAverage}, \hyperpage{19}
+    \subitem {handleOverflow}, \hyperpage{20}
+  \item {DataProcessor.cpp}, \hyperpage{35}
+  \item {DataProcessor.h}, \hyperpage{36}
+
+  \indexspace
+
+  \item {generateSalt}
+    \subitem {Authenticator}, \hyperpage{5}
+  \item {getClientDBFile}
+    \subitem {Configuration}, \hyperpage{11}
+  \item {getCurrentTime}
+    \subitem {Logger}, \hyperpage{21}
+  \item {getLogFile}
+    \subitem {Configuration}, \hyperpage{11}
+  \item {getPassword}
+    \subitem {ClientDatabase}, \hyperpage{8}
+  \item {getPort}
+    \subitem {Configuration}, \hyperpage{11}
+
+  \indexspace
+
+  \item {handleConnection}
+    \subitem {ConnectionHandler}, \hyperpage{14}
+  \item {handleOverflow}
+    \subitem {DataProcessor}, \hyperpage{20}
+  \item {hashPassword}
+    \subitem {Authenticator}, \hyperpage{6}
+
+  \indexspace
+
+  \item {initialize}
+    \subitem {Logger}, \hyperpage{21}
+  \item {initializeSocket}
+    \subitem {Server}, \hyperpage{24}
+
+  \indexspace
+
+  \item {loadFromFile}
+    \subitem {ClientDatabase}, \hyperpage{9}
+  \item {logError}
+    \subitem {Logger}, \hyperpage{22}
+  \item {Logger}, \hyperpage{20}
+    \subitem {getCurrentTime}, \hyperpage{21}
+    \subitem {initialize}, \hyperpage{21}
+    \subitem {logError}, \hyperpage{22}
+    \subitem {logInfo}, \hyperpage{22}
+  \item {Logger.cpp}, \hyperpage{38}
+  \item {Logger.h}, \hyperpage{38}
+  \item {logInfo}
+    \subitem {Logger}, \hyperpage{22}
+
+  \indexspace
+
+  \item {main}
+    \subitem {main.cpp}, \hyperpage{40}
+  \item {main.cpp}, \hyperpage{40}
+    \subitem {main}, \hyperpage{40}
+    \subitem {signalHandler}, \hyperpage{41}
+
+  \indexspace
+
+  \item {parseCommandLine}
+    \subitem {Configuration}, \hyperpage{11}
+  \item {processData}
+    \subitem {ConnectionHandler}, \hyperpage{15}
+
+  \indexspace
+
+  \item {receiveExactly}
+    \subitem {ConnectionHandler}, \hyperpage{15}
+  \item {receiveWithTimeout}
+    \subitem {ConnectionHandler}, \hyperpage{16}
+  \item {recvWithTimeout}
+    \subitem {ConnectionHandler}, \hyperpage{16}
+
+  \indexspace
+
+  \item {sendExactly}
+    \subitem {ConnectionHandler}, \hyperpage{18}
+  \item {Server}, \hyperpage{23}
+    \subitem {$\sim$Server}, \hyperpage{24}
+    \subitem {acceptConnections}, \hyperpage{24}
+    \subitem {initializeSocket}, \hyperpage{24}
+    \subitem {start}, \hyperpage{25}
+    \subitem {stop}, \hyperpage{25}
+  \item {Server.cpp}, \hyperpage{41}
+  \item {Server.h}, \hyperpage{42}
+  \item {signalHandler}
+    \subitem {main.cpp}, \hyperpage{41}
+  \item {start}
+    \subitem {Server}, \hyperpage{25}
+  \item {stop}
+    \subitem {Server}, \hyperpage{25}
+
+  \indexspace
+
+  \item {toHexString}
+    \subitem {Authenticator}, \hyperpage{6}
+
+  \indexspace
+
+  \item {userExists}
+    \subitem {ClientDatabase}, \hyperpage{9}
+
+  \indexspace
+
+  \item {verifyPassword}
+    \subitem {Authenticator}, \hyperpage{7}
+
+  \indexspace
+
+  \item {waitForData}
+    \subitem {ConnectionHandler}, \hyperpage{18}
+
+\end{theindex}

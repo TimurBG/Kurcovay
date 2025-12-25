@@ -1,0 +1,105 @@
+\hypertarget{classClientDatabase}{}\doxysection{Класс Client\+Database}
+\label{classClientDatabase}\index{ClientDatabase@{ClientDatabase}}
+
+
+Класс для работы с базой данных пользователей  
+
+
+
+
+{\ttfamily \#include $<$Client\+Database.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classClientDatabase_a1ce9b6133b4ea6d13c72d349ee6c0871}{load\+From\+File}} (const std\+::string \&\mbox{\hyperlink{classClientDatabase_a75435bb60341f90c616b50e4f9346e68}{filename}})
+\begin{DoxyCompactList}\small\item\em Загружает базу пользователей из файла \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classClientDatabase_a53e02c098ec9bf7c7598a2aab00e87e2}{user\+Exists}} (const std\+::string \&login) const
+\begin{DoxyCompactList}\small\item\em Проверяет существование пользователя в базе \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classClientDatabase_a8f4f67f07f92cbf664c8914e7e84b548}{get\+Password}} (const std\+::string \&login) const
+\begin{DoxyCompactList}\small\item\em Получает пароль пользователя \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classClientDatabase_a6de35836c96caf9878b9bdd76dbe3ae9}\label{classClientDatabase_a6de35836c96caf9878b9bdd76dbe3ae9}} 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::string $>$ {\bfseries users}
+\begin{DoxyCompactList}\small\item\em Хэш-\/таблица\+: логин -\/\texorpdfstring{$>$}{>} пароль \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classClientDatabase_a75435bb60341f90c616b50e4f9346e68}\label{classClientDatabase_a75435bb60341f90c616b50e4f9346e68}} 
+std\+::string {\bfseries filename}
+\begin{DoxyCompactList}\small\item\em Имя файла базы данных \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для работы с базой данных пользователей 
+
+Предоставляет методы для загрузки базы пользователей из файла, проверки существования пользователя и получения пароля. 
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classClientDatabase_a8f4f67f07f92cbf664c8914e7e84b548}\label{classClientDatabase_a8f4f67f07f92cbf664c8914e7e84b548}} 
+\index{ClientDatabase@{ClientDatabase}!getPassword@{getPassword}}
+\index{getPassword@{getPassword}!ClientDatabase@{ClientDatabase}}
+\doxysubsubsection{\texorpdfstring{getPassword()}{getPassword()}}
+{\footnotesize\ttfamily std\+::string Client\+Database\+::get\+Password (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{login }\end{DoxyParamCaption}) const}
+
+
+
+Получает пароль пользователя 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em login} & Логин пользователя \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Пароль пользователя или пустая строка если пользователь не найден 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classClientDatabase_a1ce9b6133b4ea6d13c72d349ee6c0871}\label{classClientDatabase_a1ce9b6133b4ea6d13c72d349ee6c0871}} 
+\index{ClientDatabase@{ClientDatabase}!loadFromFile@{loadFromFile}}
+\index{loadFromFile@{loadFromFile}!ClientDatabase@{ClientDatabase}}
+\doxysubsubsection{\texorpdfstring{loadFromFile()}{loadFromFile()}}
+{\footnotesize\ttfamily bool Client\+Database\+::load\+From\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{fname }\end{DoxyParamCaption})}
+
+
+
+Загружает базу пользователей из файла 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em filename} & Имя файла базы данных \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если загрузка успешна, false в противном случае
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Аргументы}
+{\em fname} & Имя файла базы данных \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если загрузка успешна, false в противном случае
+\end{DoxyReturn}
+Формат файла\+: каждая строка содержит логин и пароль, разделенные двоеточием. Пример\+: user1\+:password1 \mbox{\Hypertarget{classClientDatabase_a53e02c098ec9bf7c7598a2aab00e87e2}\label{classClientDatabase_a53e02c098ec9bf7c7598a2aab00e87e2}} 
+\index{ClientDatabase@{ClientDatabase}!userExists@{userExists}}
+\index{userExists@{userExists}!ClientDatabase@{ClientDatabase}}
+\doxysubsubsection{\texorpdfstring{userExists()}{userExists()}}
+{\footnotesize\ttfamily bool Client\+Database\+::user\+Exists (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{login }\end{DoxyParamCaption}) const}
+
+
+
+Проверяет существование пользователя в базе 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em login} & Логин пользователя \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если пользователь существует, false в противном случае 
+\end{DoxyReturn}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ClientDatabase_8h}{Client\+Database.\+h}}\item 
+\mbox{\hyperlink{ClientDatabase_8cpp}{Client\+Database.\+cpp}}\end{DoxyCompactItemize}

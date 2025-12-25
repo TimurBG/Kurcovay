@@ -1,0 +1,76 @@
+\hypertarget{classDataProcessor}{}\doxysection{Класс Data\+Processor}
+\label{classDataProcessor}\index{DataProcessor@{DataProcessor}}
+
+
+Класс для обработки числовых данных  
+
+
+
+
+{\ttfamily \#include $<$Data\+Processor.\+h$>$}
+
+\doxysubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static uint32\+\_\+t \mbox{\hyperlink{classDataProcessor_a375271bf44906652e88db977b4379af7}{calculate\+Average}} (const std\+::vector$<$ uint32\+\_\+t $>$ \&vector)
+\begin{DoxyCompactList}\small\item\em Вычисляет среднее значение элементов вектора \end{DoxyCompactList}\item 
+static uint32\+\_\+t \mbox{\hyperlink{classDataProcessor_aba19227b683e81de06fa02910216f212}{handle\+Overflow}} (uint64\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Обрабатывает переполнение при преобразовании типов \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для обработки числовых данных 
+
+Предоставляет статические методы для вычисления среднего значения вектора чисел и обработки переполнения при преобразовании типов. 
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classDataProcessor_a375271bf44906652e88db977b4379af7}\label{classDataProcessor_a375271bf44906652e88db977b4379af7}} 
+\index{DataProcessor@{DataProcessor}!calculateAverage@{calculateAverage}}
+\index{calculateAverage@{calculateAverage}!DataProcessor@{DataProcessor}}
+\doxysubsubsection{\texorpdfstring{calculateAverage()}{calculateAverage()}}
+{\footnotesize\ttfamily uint32\+\_\+t Data\+Processor\+::calculate\+Average (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint32\+\_\+t $>$ \&}]{vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Вычисляет среднее значение элементов вектора 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em vector} & Вектор значений \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Среднее значение вектора или 0 если вектор пуст
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Аргументы}
+{\em vector} & Вектор значений \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Среднее значение вектора или 0 если вектор пуст
+\end{DoxyReturn}
+Вычисляет сумму всех элементов и делит на количество элементов. Использует 64-\/битную арифметику для избежания переполнения. \mbox{\Hypertarget{classDataProcessor_aba19227b683e81de06fa02910216f212}\label{classDataProcessor_aba19227b683e81de06fa02910216f212}} 
+\index{DataProcessor@{DataProcessor}!handleOverflow@{handleOverflow}}
+\index{handleOverflow@{handleOverflow}!DataProcessor@{DataProcessor}}
+\doxysubsubsection{\texorpdfstring{handleOverflow()}{handleOverflow()}}
+{\footnotesize\ttfamily uint32\+\_\+t Data\+Processor\+::handle\+Overflow (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Обрабатывает переполнение при преобразовании типов 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em value} & Значение для преобразования \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Значение, ограниченное диапазоном uint32\+\_\+t
+\end{DoxyReturn}
+Если значение больше UINT32\+\_\+\+MAX, возвращает UINT32\+\_\+\+MAX. Если значение меньше 0, возвращает 0. Иначе возвращает значение, приведенное к uint32\+\_\+t. 
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{DataProcessor_8h}{Data\+Processor.\+h}}\item 
+\mbox{\hyperlink{DataProcessor_8cpp}{Data\+Processor.\+cpp}}\end{DoxyCompactItemize}

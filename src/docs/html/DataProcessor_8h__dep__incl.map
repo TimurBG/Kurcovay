@@ -1,0 +1,9 @@
+<map id="DataProcessor.h" name="DataProcessor.h">
+<area shape="rect" id="node1" title="Заголовочный файл класса DataProcessor для обработки данных" alt="" coords="188,5,315,32"/>
+<area shape="rect" id="node2" href="$ConnectionHandler_8h.html" title="Заголовочный файл класса ConnectionHandler для обработки клиентских соединений" alt="" coords="86,80,243,107"/>
+<area shape="rect" id="node7" href="$DataProcessor_8cpp.html" title="Реализация класса DataProcessor." alt="" coords="268,80,411,107"/>
+<area shape="rect" id="node3" href="$ConnectionHandler_8cpp.html" title="Реализация класса ConnectionHandler." alt="" coords="5,155,177,181"/>
+<area shape="rect" id="node4" href="$Server_8h.html" title="Заголовочный файл класса Server для управления сервером" alt="" coords="202,155,277,181"/>
+<area shape="rect" id="node5" href="$Server_8cpp.html" title="Реализация класса Server." alt="" coords="138,229,229,256"/>
+<area shape="rect" id="node6" href="$main_8cpp.html" title="Основной файл приложения сервера" alt="" coords="253,229,335,256"/>
+</map>

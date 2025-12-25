@@ -1,0 +1,103 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\babel@toc {russian}{}\relax 
+\contentsline {chapter}{\numberline {1}Алфавитный указатель классов}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Классы}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Список файлов}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Файлы}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Классы}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Класс Authenticator}{5}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Подробное описание}{5}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Методы}{5}{subsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.1}generateSalt()}{6}{subsubsection.3.1.2.1}%
+\contentsline {subsubsection}{\numberline {3.1.2.2}hashPassword()}{6}{subsubsection.3.1.2.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.3}toHexString()}{6}{subsubsection.3.1.2.3}%
+\contentsline {subsubsection}{\numberline {3.1.2.4}verifyPassword()}{7}{subsubsection.3.1.2.4}%
+\contentsline {section}{\numberline {3.2}Класс Client\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Database}{8}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Подробное описание}{8}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Методы}{8}{subsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.2.1}getPassword()}{8}{subsubsection.3.2.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2.2}loadFromFile()}{9}{subsubsection.3.2.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.2.3}userExists()}{9}{subsubsection.3.2.2.3}%
+\contentsline {section}{\numberline {3.3}Класс Configuration}{10}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Подробное описание}{10}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Методы}{11}{subsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.2.1}getClientDBFile()}{11}{subsubsection.3.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.3.2.2}getLogFile()}{11}{subsubsection.3.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.3.2.3}getPort()}{11}{subsubsection.3.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.3.2.4}parseCommandLine()}{11}{subsubsection.3.3.2.4}%
+\contentsline {section}{\numberline {3.4}Класс Connection\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler}{12}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Подробное описание}{13}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Конструктор(ы)}{14}{subsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.2.1}ConnectionHandler()}{14}{subsubsection.3.4.2.1}%
+\contentsline {subsection}{\numberline {3.4.3}Методы}{14}{subsection.3.4.3}%
+\contentsline {subsubsection}{\numberline {3.4.3.1}authenticateClient()}{14}{subsubsection.3.4.3.1}%
+\contentsline {subsubsection}{\numberline {3.4.3.2}handleConnection()}{15}{subsubsection.3.4.3.2}%
+\contentsline {subsubsection}{\numberline {3.4.3.3}processData()}{15}{subsubsection.3.4.3.3}%
+\contentsline {subsubsection}{\numberline {3.4.3.4}receiveExactly()}{15}{subsubsection.3.4.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.3.5}receiveWithTimeout()}{16}{subsubsection.3.4.3.5}%
+\contentsline {subsubsection}{\numberline {3.4.3.6}recvWithTimeout()}{16}{subsubsection.3.4.3.6}%
+\contentsline {subsubsection}{\numberline {3.4.3.7}sendExactly()}{18}{subsubsection.3.4.3.7}%
+\contentsline {subsubsection}{\numberline {3.4.3.8}waitForData()}{18}{subsubsection.3.4.3.8}%
+\contentsline {section}{\numberline {3.5}Класс Data\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Processor}{19}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Подробное описание}{19}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Методы}{19}{subsection.3.5.2}%
+\contentsline {subsubsection}{\numberline {3.5.2.1}calculateAverage()}{19}{subsubsection.3.5.2.1}%
+\contentsline {subsubsection}{\numberline {3.5.2.2}handleOverflow()}{20}{subsubsection.3.5.2.2}%
+\contentsline {section}{\numberline {3.6}Класс Logger}{20}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Подробное описание}{21}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Методы}{21}{subsection.3.6.2}%
+\contentsline {subsubsection}{\numberline {3.6.2.1}getCurrentTime()}{21}{subsubsection.3.6.2.1}%
+\contentsline {subsubsection}{\numberline {3.6.2.2}initialize()}{21}{subsubsection.3.6.2.2}%
+\contentsline {subsubsection}{\numberline {3.6.2.3}logError()}{22}{subsubsection.3.6.2.3}%
+\contentsline {subsubsection}{\numberline {3.6.2.4}logInfo()}{22}{subsubsection.3.6.2.4}%
+\contentsline {section}{\numberline {3.7}Класс Server}{23}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Подробное описание}{24}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Конструктор(ы)}{24}{subsection.3.7.2}%
+\contentsline {subsubsection}{\numberline {3.7.2.1}$\sim $Server()}{24}{subsubsection.3.7.2.1}%
+\contentsline {subsection}{\numberline {3.7.3}Методы}{24}{subsection.3.7.3}%
+\contentsline {subsubsection}{\numberline {3.7.3.1}acceptConnections()}{24}{subsubsection.3.7.3.1}%
+\contentsline {subsubsection}{\numberline {3.7.3.2}initializeSocket()}{25}{subsubsection.3.7.3.2}%
+\contentsline {subsubsection}{\numberline {3.7.3.3}start()}{25}{subsubsection.3.7.3.3}%
+\contentsline {subsubsection}{\numberline {3.7.3.4}stop()}{26}{subsubsection.3.7.3.4}%
+\contentsline {chapter}{\numberline {4}Файлы}{27}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Файл Authenticator.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{27}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Подробное описание}{27}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}Файл Authenticator.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{27}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Подробное описание}{28}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.3}Authenticator.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{29}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Файл Client\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Database.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{29}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Подробное описание}{29}{subsection.4.4.1}%
+\contentsline {section}{\numberline {4.5}Файл Client\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Database.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{30}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Подробное описание}{30}{subsection.4.5.1}%
+\contentsline {section}{\numberline {4.6}Client\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Database.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{31}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Файл Configuration.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{31}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Подробное описание}{31}{subsection.4.7.1}%
+\contentsline {section}{\numberline {4.8}Файл Configuration.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{31}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Подробное описание}{32}{subsection.4.8.1}%
+\contentsline {section}{\numberline {4.9}Configuration.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{33}{section.4.9}%
+\contentsline {section}{\numberline {4.10}Файл Connection\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{33}{section.4.10}%
+\contentsline {subsection}{\numberline {4.10.1}Подробное описание}{33}{subsection.4.10.1}%
+\contentsline {section}{\numberline {4.11}Файл Connection\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{33}{section.4.11}%
+\contentsline {subsection}{\numberline {4.11.1}Подробное описание}{34}{subsection.4.11.1}%
+\contentsline {section}{\numberline {4.12}Connection\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{35}{section.4.12}%
+\contentsline {section}{\numberline {4.13}Файл Data\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Processor.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{35}{section.4.13}%
+\contentsline {subsection}{\numberline {4.13.1}Подробное описание}{36}{subsection.4.13.1}%
+\contentsline {section}{\numberline {4.14}Файл Data\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Processor.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{36}{section.4.14}%
+\contentsline {subsection}{\numberline {4.14.1}Подробное описание}{37}{subsection.4.14.1}%
+\contentsline {section}{\numberline {4.15}Data\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Processor.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{37}{section.4.15}%
+\contentsline {section}{\numberline {4.16}Файл Logger.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{38}{section.4.16}%
+\contentsline {subsection}{\numberline {4.16.1}Подробное описание}{38}{subsection.4.16.1}%
+\contentsline {section}{\numberline {4.17}Файл Logger.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{38}{section.4.17}%
+\contentsline {subsection}{\numberline {4.17.1}Подробное описание}{39}{subsection.4.17.1}%
+\contentsline {section}{\numberline {4.18}Logger.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{39}{section.4.18}%
+\contentsline {section}{\numberline {4.19}Файл main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{40}{section.4.19}%
+\contentsline {subsection}{\numberline {4.19.1}Подробное описание}{40}{subsection.4.19.1}%
+\contentsline {subsection}{\numberline {4.19.2}Функции}{40}{subsection.4.19.2}%
+\contentsline {subsubsection}{\numberline {4.19.2.1}main()}{40}{subsubsection.4.19.2.1}%
+\contentsline {subsubsection}{\numberline {4.19.2.2}signalHandler()}{41}{subsubsection.4.19.2.2}%
+\contentsline {section}{\numberline {4.20}Файл Server.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{41}{section.4.20}%
+\contentsline {subsection}{\numberline {4.20.1}Подробное описание}{42}{subsection.4.20.1}%
+\contentsline {section}{\numberline {4.21}Файл Server.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{42}{section.4.21}%
+\contentsline {subsection}{\numberline {4.21.1}Подробное описание}{43}{subsection.4.21.1}%
+\contentsline {section}{\numberline {4.22}Server.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{43}{section.4.22}%
+\contentsline {chapter}{{\cyrillictext \CYRP \cyrr \cyre \cyrd \cyrm \cyre \cyrt \cyrn \cyrery \cyrishrt \ \cyru \cyrk \cyra \cyrz \cyra \cyrt \cyre \cyrl \cyrsftsn }}{45}{section*.53}%

@@ -1,0 +1,159 @@
+\hypertarget{classServer}{}\doxysection{Класс Server}
+\label{classServer}\index{Server@{Server}}
+
+
+Основной класс сервера приложения  
+
+
+
+
+{\ttfamily \#include $<$Server.\+h$>$}
+
+
+
+Граф связей класса Server\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{classServer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classServer_ad5ec9462b520e59f7ea831e157ee5e59}\label{classServer_ad5ec9462b520e59f7ea831e157ee5e59}} 
+{\bfseries Server} ()
+\begin{DoxyCompactList}\small\item\em Конструктор класса \mbox{\hyperlink{classServer}{Server}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classServer_a4b3aa2579cb1c8cd1d069582c14d0fa6}{$\sim$\+Server}} ()
+\begin{DoxyCompactList}\small\item\em Деструктор класса \mbox{\hyperlink{classServer}{Server}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classServer_a522365bfad58d084bc949a989e71a648}{start}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Запускает сервер \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServer_a07c45a7e101a3926d8f9685c3c5d14e4}{stop}} ()
+\begin{DoxyCompactList}\small\item\em Останавливает сервер \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые члены}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classServer_a20e711282af6b6826164f072a18ad020}{initialize\+Socket}} ()
+\begin{DoxyCompactList}\small\item\em Инициализирует сокет сервера \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServer_a881ea1e86b4045e588f8cfafdd2bc441}{accept\+Connections}} ()
+\begin{DoxyCompactList}\small\item\em Принимает входящие соединения \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classServer_a08b27061b1d869d9a547248429b288e6}\label{classServer_a08b27061b1d869d9a547248429b288e6}} 
+\mbox{\hyperlink{classConfiguration}{Configuration}} {\bfseries config}
+\begin{DoxyCompactList}\small\item\em Конфигурация сервера \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classServer_a7360c0a0ffcb1c046f5c076663097d09}\label{classServer_a7360c0a0ffcb1c046f5c076663097d09}} 
+\mbox{\hyperlink{classClientDatabase}{Client\+Database}} {\bfseries client\+DB}
+\begin{DoxyCompactList}\small\item\em База данных пользователей \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classServer_ab50b5b20130564ba7e9a12032070882f}\label{classServer_ab50b5b20130564ba7e9a12032070882f}} 
+\mbox{\hyperlink{classLogger}{Logger}} {\bfseries logger}
+\begin{DoxyCompactList}\small\item\em Логгер для записи событий \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classServer_a56d45552461580ea61cb85293663875e}\label{classServer_a56d45552461580ea61cb85293663875e}} 
+std\+::atomic$<$ bool $>$ {\bfseries running}
+\begin{DoxyCompactList}\small\item\em Флаг работы сервера \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classServer_a0e1f90d176dd31898b84088e6f4c1d87}\label{classServer_a0e1f90d176dd31898b84088e6f4c1d87}} 
+int {\bfseries server\+Socket}
+\begin{DoxyCompactList}\small\item\em Основной сокет сервера \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Основной класс сервера приложения 
+
+Управляет инициализацией, запуском и остановкой сервера, обработкой входящих соединений и координацией работы всех компонентов. 
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classServer_a4b3aa2579cb1c8cd1d069582c14d0fa6}\label{classServer_a4b3aa2579cb1c8cd1d069582c14d0fa6}} 
+\index{Server@{Server}!````~Server@{$\sim$Server}}
+\index{````~Server@{$\sim$Server}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{$\sim$Server()}{~Server()}}
+{\footnotesize\ttfamily Server\+::$\sim$\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Деструктор класса \mbox{\hyperlink{classServer}{Server}}. 
+
+Автоматически останавливает сервер при уничтожении объекта. 
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classServer_a881ea1e86b4045e588f8cfafdd2bc441}\label{classServer_a881ea1e86b4045e588f8cfafdd2bc441}} 
+\index{Server@{Server}!acceptConnections@{acceptConnections}}
+\index{acceptConnections@{acceptConnections}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{acceptConnections()}{acceptConnections()}}
+{\footnotesize\ttfamily void Server\+::accept\+Connections (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Принимает входящие соединения 
+
+Запускает бесконечный цикл приема соединений, каждое соединение обрабатывается в отдельном потоке.
+
+Запускает бесконечный цикл приема соединений, каждое соединение обрабатывается в отдельном потоке с помощью \mbox{\hyperlink{classConnectionHandler}{Connection\+Handler}}. \mbox{\Hypertarget{classServer_a20e711282af6b6826164f072a18ad020}\label{classServer_a20e711282af6b6826164f072a18ad020}} 
+\index{Server@{Server}!initializeSocket@{initializeSocket}}
+\index{initializeSocket@{initializeSocket}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{initializeSocket()}{initializeSocket()}}
+{\footnotesize\ttfamily bool Server\+::initialize\+Socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Инициализирует сокет сервера 
+
+\begin{DoxyReturn}{Возвращает}
+true если инициализация успешна, false в противном случае
+
+true если инициализация успешна, false в противном случае
+\end{DoxyReturn}
+Создает сокет, устанавливает опции, привязывает к порту и переводит в режим прослушивания. \mbox{\Hypertarget{classServer_a522365bfad58d084bc949a989e71a648}\label{classServer_a522365bfad58d084bc949a989e71a648}} 
+\index{Server@{Server}!start@{start}}
+\index{start@{start}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily bool Server\+::start (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Запускает сервер 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em argc} & Количество аргументов командной строки \\
+\hline
+{\em argv} & Массив аргументов командной строки \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если запуск успешен, false в противном случае
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Аргументы}
+{\em argc} & Количество аргументов командной строки \\
+\hline
+{\em argv} & Массив аргументов командной строки \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если запуск успешен, false в противном случае
+\end{DoxyReturn}
+Последовательность запуска\+:
+\begin{DoxyEnumerate}
+\item Парсинг параметров командной строки
+\item Инициализация логгера
+\item Загрузка базы данных пользователей
+\item Инициализация сокета
+\item Запуск цикла приема соединений 
+\end{DoxyEnumerate}\mbox{\Hypertarget{classServer_a07c45a7e101a3926d8f9685c3c5d14e4}\label{classServer_a07c45a7e101a3926d8f9685c3c5d14e4}} 
+\index{Server@{Server}!stop@{stop}}
+\index{stop@{stop}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void Server\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Останавливает сервер 
+
+Устанавливает флаг running в false, закрывает сокет сервера и логгер. Поток accept\+Connections автоматически завершится. 
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Server_8h}{Server.\+h}}\item 
+\mbox{\hyperlink{Server_8cpp}{Server.\+cpp}}\end{DoxyCompactItemize}

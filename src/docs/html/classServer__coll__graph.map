@@ -1,0 +1,6 @@
+<map id="Server" name="Server">
+<area shape="rect" id="node1" title="Основной класс сервера приложения" alt="" coords="168,95,232,121"/>
+<area shape="rect" id="node2" href="$classConfiguration.html" title="Класс для управления конфигурацией сервера" alt="" coords="5,5,115,32"/>
+<area shape="rect" id="node3" href="$classClientDatabase.html" title="Класс для работы с базой данных пользователей" alt="" coords="139,5,261,32"/>
+<area shape="rect" id="node4" href="$classLogger.html" title="Класс для ведения журнала событий" alt="" coords="285,5,352,32"/>
+</map>

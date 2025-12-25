@@ -1,4 +1,8 @@
-// Configuration.cpp
+/**
+ * @file Configuration.cpp
+ * @brief Реализация класса Configuration
+ */
+
 #include "Configuration.h"
 #include <boost/program_options.hpp>
 #include <iostream>
@@ -6,6 +10,18 @@
 
 namespace po = boost::program_options;
 
+/**
+ * @brief Парсит параметры командной строки
+ * @param argc Количество аргументов
+ * @param argv Массив аргументов
+ * @return true если парсинг успешен, false в противном случае
+ * 
+ * Поддерживаемые параметры:
+ * -h, --help          Показать справку
+ * -c, --config FILE   Файл базы клиентов
+ * -l, --log FILE      Файл журнала
+ * -p, --port PORT     Порт сервера
+ */
 bool Configuration::parseCommandLine(int argc, char* argv[]) {
     po::options_description desc("Доступные опции");
     desc.add_options()
@@ -51,6 +67,9 @@ bool Configuration::parseCommandLine(int argc, char* argv[]) {
     }
 }
 
+/**
+ * @brief Выводит справку по использованию программы
+ */
 void Configuration::printHelp() {
     std::cout << "Использование: vcalc_server [OPTIONS]\n\n"
               << "Опции:\n"

@@ -1,0 +1,578 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Сервер аутентификации и обработки данных: Класс ConnectionHandler</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Сервер аутентификации и обработки данных<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Сервер для обработки клиентских соединений с аутентификацией пользователей</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pri-methods">Закрытые члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="#pri-static-attribs">Закрытые статические данные</a> &#124;
+<a href="classConnectionHandler-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс ConnectionHandler</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс для обработки клиентских соединений  
+ <a href="classConnectionHandler.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="ConnectionHandler_8h_source.html">ConnectionHandler.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф связей класса ConnectionHandler:</div>
+<div class="dyncontent">
+<div class="center"><img src="classConnectionHandler__coll__graph.png" border="0" usemap="#aConnectionHandler_coll__map" alt="Collaboration graph"/></div>
+<map name="aConnectionHandler_coll__map" id="aConnectionHandler_coll__map">
+<area shape="rect" title="Класс для обработки клиентских соединений" alt="" coords="52,95,199,121"/>
+<area shape="rect" href="classClientDatabase.html" title="Класс для работы с базой данных пользователей" alt="" coords="5,5,128,32"/>
+<area shape="rect" href="classLogger.html" title="Класс для ведения журнала событий" alt="" coords="152,5,219,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:afa39603c5c4da29a9d77d8264f2a9640"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConnectionHandler.html#afa39603c5c4da29a9d77d8264f2a9640">ConnectionHandler</a> (int socket, <a class="el" href="classClientDatabase.html">ClientDatabase</a> &amp;db, <a class="el" href="classLogger.html">Logger</a> &amp;log, const sockaddr_in &amp;addr)</td></tr>
+<tr class="memdesc:afa39603c5c4da29a9d77d8264f2a9640"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор класса <a class="el" href="classConnectionHandler.html" title="Класс для обработки клиентских соединений">ConnectionHandler</a>.  <a href="classConnectionHandler.html#afa39603c5c4da29a9d77d8264f2a9640">Подробнее...</a><br /></td></tr>
+<tr class="separator:afa39603c5c4da29a9d77d8264f2a9640"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78283195aac36509f85f204ba2b802a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConnectionHandler.html#a78283195aac36509f85f204ba2b802a2">handleConnection</a> ()</td></tr>
+<tr class="memdesc:a78283195aac36509f85f204ba2b802a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обрабатывает клиентское соединение  <a href="classConnectionHandler.html#a78283195aac36509f85f204ba2b802a2">Подробнее...</a><br /></td></tr>
+<tr class="separator:a78283195aac36509f85f204ba2b802a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Закрытые члены</h2></td></tr>
+<tr class="memitem:ab4c56449df7516ed823291285511f375"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConnectionHandler.html#ab4c56449df7516ed823291285511f375">authenticateClient</a> ()</td></tr>
+<tr class="memdesc:ab4c56449df7516ed823291285511f375"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выполняет аутентификацию клиента  <a href="classConnectionHandler.html#ab4c56449df7516ed823291285511f375">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab4c56449df7516ed823291285511f375"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4451a3eb3bbbb032e955982554288b8a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConnectionHandler.html#a4451a3eb3bbbb032e955982554288b8a">processData</a> ()</td></tr>
+<tr class="memdesc:a4451a3eb3bbbb032e955982554288b8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обрабатывает данные от клиента  <a href="classConnectionHandler.html#a4451a3eb3bbbb032e955982554288b8a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4451a3eb3bbbb032e955982554288b8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2723e038c0973f87b6b06921bf7d9984"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConnectionHandler.html#a2723e038c0973f87b6b06921bf7d9984">receiveExactly</a> (void *buffer, size_t size)</td></tr>
+<tr class="memdesc:a2723e038c0973f87b6b06921bf7d9984"><td class="mdescLeft">&#160;</td><td class="mdescRight">Принимает точное количество байт  <a href="classConnectionHandler.html#a2723e038c0973f87b6b06921bf7d9984">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2723e038c0973f87b6b06921bf7d9984"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b6ae6f898c8abbed1d97383244b72bd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConnectionHandler.html#a1b6ae6f898c8abbed1d97383244b72bd">sendExactly</a> (const void *buffer, size_t size)</td></tr>
+<tr class="memdesc:a1b6ae6f898c8abbed1d97383244b72bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отправляет точное количество байт  <a href="classConnectionHandler.html#a1b6ae6f898c8abbed1d97383244b72bd">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1b6ae6f898c8abbed1d97383244b72bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a339759217962bc4f47d1cf0fe1c641c5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConnectionHandler.html#a339759217962bc4f47d1cf0fe1c641c5">waitForData</a> (int timeoutSeconds=<a class="el" href="classConnectionHandler.html#a5c3a12f5481dd3940442c1e8e219c46f">TIMEOUT_SECONDS</a>)</td></tr>
+<tr class="memdesc:a339759217962bc4f47d1cf0fe1c641c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ожидает доступности данных для чтения  <a href="classConnectionHandler.html#a339759217962bc4f47d1cf0fe1c641c5">Подробнее...</a><br /></td></tr>
+<tr class="separator:a339759217962bc4f47d1cf0fe1c641c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f8dd1422a10452a1ff0ac0ed79f2d07"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConnectionHandler.html#a8f8dd1422a10452a1ff0ac0ed79f2d07">receiveWithTimeout</a> (void *buffer, size_t size, int timeoutSeconds=<a class="el" href="classConnectionHandler.html#a5c3a12f5481dd3940442c1e8e219c46f">TIMEOUT_SECONDS</a>)</td></tr>
+<tr class="memdesc:a8f8dd1422a10452a1ff0ac0ed79f2d07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Принимает данные с таймаутом  <a href="classConnectionHandler.html#a8f8dd1422a10452a1ff0ac0ed79f2d07">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8f8dd1422a10452a1ff0ac0ed79f2d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a704566a84b6081b6719019e967a61f50"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConnectionHandler.html#a704566a84b6081b6719019e967a61f50">recvWithTimeout</a> (void *buffer, size_t size, int timeoutSeconds=<a class="el" href="classConnectionHandler.html#a5c3a12f5481dd3940442c1e8e219c46f">TIMEOUT_SECONDS</a>)</td></tr>
+<tr class="memdesc:a704566a84b6081b6719019e967a61f50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Принимает данные с таймаутом (низкоуровневый метод)  <a href="classConnectionHandler.html#a704566a84b6081b6719019e967a61f50">Подробнее...</a><br /></td></tr>
+<tr class="separator:a704566a84b6081b6719019e967a61f50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:ad4b84e685d8ab5664e2e10030622d32b"><td class="memItemLeft" align="right" valign="top"><a id="ad4b84e685d8ab5664e2e10030622d32b" name="ad4b84e685d8ab5664e2e10030622d32b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>clientSocket</b></td></tr>
+<tr class="memdesc:ad4b84e685d8ab5664e2e10030622d32b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сокет клиентского соединения <br /></td></tr>
+<tr class="separator:ad4b84e685d8ab5664e2e10030622d32b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69364684104263edae0ac7c9e3530a4a"><td class="memItemLeft" align="right" valign="top"><a id="a69364684104263edae0ac7c9e3530a4a" name="a69364684104263edae0ac7c9e3530a4a"></a>
+<a class="el" href="classClientDatabase.html">ClientDatabase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>clientDB</b></td></tr>
+<tr class="memdesc:a69364684104263edae0ac7c9e3530a4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ссылка на базу данных пользователей <br /></td></tr>
+<tr class="separator:a69364684104263edae0ac7c9e3530a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dac158a33237a8d7253ae7eb2e8efa8"><td class="memItemLeft" align="right" valign="top"><a id="a0dac158a33237a8d7253ae7eb2e8efa8" name="a0dac158a33237a8d7253ae7eb2e8efa8"></a>
+<a class="el" href="classLogger.html">Logger</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>logger</b></td></tr>
+<tr class="memdesc:a0dac158a33237a8d7253ae7eb2e8efa8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ссылка на логгер <br /></td></tr>
+<tr class="separator:a0dac158a33237a8d7253ae7eb2e8efa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8495ca1c3f554c5e5e7692afa22d1a3"><td class="memItemLeft" align="right" valign="top"><a id="ac8495ca1c3f554c5e5e7692afa22d1a3" name="ac8495ca1c3f554c5e5e7692afa22d1a3"></a>
+sockaddr_in&#160;</td><td class="memItemRight" valign="bottom"><b>clientAddr</b></td></tr>
+<tr class="memdesc:ac8495ca1c3f554c5e5e7692afa22d1a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Адрес клиента <br /></td></tr>
+<tr class="separator:ac8495ca1c3f554c5e5e7692afa22d1a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Закрытые статические данные</h2></td></tr>
+<tr class="memitem:a5c3a12f5481dd3940442c1e8e219c46f"><td class="memItemLeft" align="right" valign="top"><a id="a5c3a12f5481dd3940442c1e8e219c46f" name="a5c3a12f5481dd3940442c1e8e219c46f"></a>
+static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>TIMEOUT_SECONDS</b> = 5</td></tr>
+<tr class="memdesc:a5c3a12f5481dd3940442c1e8e219c46f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Таймаут операций в секундах <br /></td></tr>
+<tr class="separator:a5c3a12f5481dd3940442c1e8e219c46f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p >Класс для обработки клиентских соединений </p>
+<p >Обрабатывает отдельное клиентское соединение, включая аутентификацию, прием и обработку данных, отправку результатов. </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="afa39603c5c4da29a9d77d8264f2a9640" name="afa39603c5c4da29a9d77d8264f2a9640"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa39603c5c4da29a9d77d8264f2a9640">&#9670;&nbsp;</a></span>ConnectionHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ConnectionHandler::ConnectionHandler </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>socket</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classClientDatabase.html">ClientDatabase</a> &amp;&#160;</td>
+          <td class="paramname"><em>db</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classLogger.html">Logger</a> &amp;&#160;</td>
+          <td class="paramname"><em>log</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const sockaddr_in &amp;&#160;</td>
+          <td class="paramname"><em>addr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Конструктор класса <a class="el" href="classConnectionHandler.html" title="Класс для обработки клиентских соединений">ConnectionHandler</a>. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">socket</td><td>Сокет клиентского соединения </td></tr>
+    <tr><td class="paramname">db</td><td>Ссылка на базу данных пользователей </td></tr>
+    <tr><td class="paramname">log</td><td>Ссылка на логгер </td></tr>
+    <tr><td class="paramname">addr</td><td>Адрес клиента </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="ab4c56449df7516ed823291285511f375" name="ab4c56449df7516ed823291285511f375"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4c56449df7516ed823291285511f375">&#9670;&nbsp;</a></span>authenticateClient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ConnectionHandler::authenticateClient </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Выполняет аутентификацию клиента </p>
+<dl class="section return"><dt>Возвращает</dt><dd>true если аутентификация успешна, false в противном случае</dd>
+<dd>
+true если аутентификация успешна, false в противном случае</dd></dl>
+<p>Процесс аутентификации:</p><ol type="1">
+<li>Получение логина от клиента</li>
+<li>Генерация и отправка соли</li>
+<li>Получение хеша пароля</li>
+<li>Проверка хеша с использованием базы данных </li>
+</ol>
+
+</div>
+</div>
+<a id="a78283195aac36509f85f204ba2b802a2" name="a78283195aac36509f85f204ba2b802a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78283195aac36509f85f204ba2b802a2">&#9670;&nbsp;</a></span>handleConnection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ConnectionHandler::handleConnection </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Обрабатывает клиентское соединение </p>
+<p >Выполняет аутентификацию и обработку данных, затем закрывает соединение.</p>
+<p >Основной метод обработки соединения:</p><ol type="1">
+<li>Установка таймаутов на сокет</li>
+<li>Аутентификация клиента</li>
+<li>Обработка данных</li>
+<li>Закрытие соединения </li>
+</ol>
+
+</div>
+</div>
+<a id="a4451a3eb3bbbb032e955982554288b8a" name="a4451a3eb3bbbb032e955982554288b8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4451a3eb3bbbb032e955982554288b8a">&#9670;&nbsp;</a></span>processData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ConnectionHandler::processData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Обрабатывает данные от клиента </p>
+<dl class="section return"><dt>Возвращает</dt><dd>true если обработка успешна, false в противном случае</dd>
+<dd>
+true если обработка успешна, false в противном случае</dd></dl>
+<p>Процесс обработки данных:</p><ol type="1">
+<li>Получение количества векторов</li>
+<li>Для каждого вектора:<ul>
+<li>Получение размера вектора</li>
+<li>Получение значений вектора</li>
+<li>Вычисление среднего значения</li>
+<li>Отправка результата </li>
+</ul>
+</li>
+</ol>
+
+</div>
+</div>
+<a id="a2723e038c0973f87b6b06921bf7d9984" name="a2723e038c0973f87b6b06921bf7d9984"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2723e038c0973f87b6b06921bf7d9984">&#9670;&nbsp;</a></span>receiveExactly()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ConnectionHandler::receiveExactly </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Принимает точное количество байт </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>Буфер для приема данных </td></tr>
+    <tr><td class="paramname">size</td><td>Количество байт для приема </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true если прием успешен, false в противном случае </dd></dl>
+
+</div>
+</div>
+<a id="a8f8dd1422a10452a1ff0ac0ed79f2d07" name="a8f8dd1422a10452a1ff0ac0ed79f2d07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f8dd1422a10452a1ff0ac0ed79f2d07">&#9670;&nbsp;</a></span>receiveWithTimeout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ConnectionHandler::receiveWithTimeout </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeoutSeconds</em> = <code><a class="el" href="classConnectionHandler.html#a5c3a12f5481dd3940442c1e8e219c46f">TIMEOUT_SECONDS</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Принимает данные с таймаутом </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>Буфер для приема данных </td></tr>
+    <tr><td class="paramname">size</td><td>Количество байт для приема </td></tr>
+    <tr><td class="paramname">timeoutSeconds</td><td>Таймаут в секундах </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true если прием успешен, false в противном случае</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>Буфер для приема данных </td></tr>
+    <tr><td class="paramname">size</td><td>Количество байт для приема </td></tr>
+    <tr><td class="paramname">timeoutSeconds</td><td>Таймаут в секундах </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true если прием успешен, false в противном случае</dd></dl>
+<p>Гарантированно принимает указанное количество байт или возвращает ошибку. </p>
+
+</div>
+</div>
+<a id="a704566a84b6081b6719019e967a61f50" name="a704566a84b6081b6719019e967a61f50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a704566a84b6081b6719019e967a61f50">&#9670;&nbsp;</a></span>recvWithTimeout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ssize_t ConnectionHandler::recvWithTimeout </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeoutSeconds</em> = <code><a class="el" href="classConnectionHandler.html#a5c3a12f5481dd3940442c1e8e219c46f">TIMEOUT_SECONDS</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Принимает данные с таймаутом (низкоуровневый метод) </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>Буфер для приема данных </td></tr>
+    <tr><td class="paramname">size</td><td>Максимальный размер буфера </td></tr>
+    <tr><td class="paramname">timeoutSeconds</td><td>Таймаут в секундах </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Количество принятых байт или -1 при ошибке </dd></dl>
+
+</div>
+</div>
+<a id="a1b6ae6f898c8abbed1d97383244b72bd" name="a1b6ae6f898c8abbed1d97383244b72bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b6ae6f898c8abbed1d97383244b72bd">&#9670;&nbsp;</a></span>sendExactly()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ConnectionHandler::sendExactly </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Отправляет точное количество байт </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>Буфер с данными для отправки </td></tr>
+    <tr><td class="paramname">size</td><td>Количество байт для отправки </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true если отправка успешна, false в противном случае</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>Буфер с данными для отправки </td></tr>
+    <tr><td class="paramname">size</td><td>Количество байт для отправки </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true если отправка успешна, false в противном случае</dd></dl>
+<p>Гарантированно отправляет указанное количество байт или возвращает ошибку. </p>
+
+</div>
+</div>
+<a id="a339759217962bc4f47d1cf0fe1c641c5" name="a339759217962bc4f47d1cf0fe1c641c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a339759217962bc4f47d1cf0fe1c641c5">&#9670;&nbsp;</a></span>waitForData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ConnectionHandler::waitForData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeoutSeconds</em> = <code><a class="el" href="classConnectionHandler.html#a5c3a12f5481dd3940442c1e8e219c46f">TIMEOUT_SECONDS</a></code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ожидает доступности данных для чтения </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeoutSeconds</td><td>Таймаут в секундах </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true если данные доступны, false при таймауте или ошибке</dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeoutSeconds</td><td>Таймаут в секундах </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true если данные доступны, false при таймауте или ошибке</dd></dl>
+<p>Использует системный вызов select для ожидания данных с таймаутом. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li><a class="el" href="ConnectionHandler_8h_source.html">ConnectionHandler.h</a></li>
+<li><a class="el" href="ConnectionHandler_8cpp.html">ConnectionHandler.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<map id="ClientDatabase.h" name="ClientDatabase.h">
+<area shape="rect" id="node1" title="Заголовочный файл класса ClientDatabase для работы с базой пользователей" alt="" coords="190,5,325,32"/>
+<area shape="rect" id="node2" href="$ClientDatabase_8cpp.html" title="Реализация класса ClientDatabase." alt="" coords="5,80,155,107"/>
+<area shape="rect" id="node3" href="$ConnectionHandler_8h.html" title="Заголовочный файл класса ConnectionHandler для обработки клиентских соединений" alt="" coords="179,80,336,107"/>
+<area shape="rect" id="node5" href="$Server_8h.html" title="Заголовочный файл класса Server для управления сервером" alt="" coords="336,155,411,181"/>
+<area shape="rect" id="node4" href="$ConnectionHandler_8cpp.html" title="Реализация класса ConnectionHandler." alt="" coords="139,155,311,181"/>
+<area shape="rect" id="node6" href="$Server_8cpp.html" title="Реализация класса Server." alt="" coords="273,229,364,256"/>
+<area shape="rect" id="node7" href="$main_8cpp.html" title="Основной файл приложения сервера" alt="" coords="388,229,471,256"/>
+</map>

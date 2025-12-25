@@ -1,0 +1,27 @@
+\hypertarget{Configuration_8h_source}{}\doxysection{Configuration.\+h}
+\mbox{\hyperlink{Configuration_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{20 \textcolor{keyword}{class }\mbox{\hyperlink{classConfiguration}{Configuration}} \{}
+\DoxyCodeLine{21 \textcolor{keyword}{private}:}
+\DoxyCodeLine{22     std::string \mbox{\hyperlink{classConfiguration_a1bc13dbd31f5327a16498de782c3d7a5}{clientDBFile}} = \textcolor{stringliteral}{"{}./etc/vcalc.conf"{}}; }
+\DoxyCodeLine{23     std::string \mbox{\hyperlink{classConfiguration_a70b514aa2d44916b3888badf7e3827ed}{logFile}} = \textcolor{stringliteral}{"{}./var/log/vcalc.log"{}};   }
+\DoxyCodeLine{24     \textcolor{keywordtype}{int} \mbox{\hyperlink{classConfiguration_af31ae5c558fad41f14e607712ac12fea}{port}} = 33333;                              }
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{keyword}{public}:}
+\DoxyCodeLine{33     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classConfiguration_a0e10c2a9f2e2d3070b8054ab2bab7c28}{parseCommandLine}}(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char}* argv[]);}
+\DoxyCodeLine{34     }
+\DoxyCodeLine{39     \textcolor{keyword}{const} std::string\& \mbox{\hyperlink{classConfiguration_a38b51ea2503eb2f27eda3d79b7b9c0f8}{getClientDBFile}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classConfiguration_a1bc13dbd31f5327a16498de782c3d7a5}{clientDBFile}}; \}}
+\DoxyCodeLine{40     }
+\DoxyCodeLine{45     \textcolor{keyword}{const} std::string\& \mbox{\hyperlink{classConfiguration_ac12322defbae18eaf9d5c3e25690a72b}{getLogFile}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classConfiguration_a70b514aa2d44916b3888badf7e3827ed}{logFile}}; \}}
+\DoxyCodeLine{46     }
+\DoxyCodeLine{51     \textcolor{keywordtype}{int} \mbox{\hyperlink{classConfiguration_ab34eb25aa1e175c7ac8323300b298a8a}{getPort}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classConfiguration_af31ae5c558fad41f14e607712ac12fea}{port}}; \}}
+\DoxyCodeLine{52     }
+\DoxyCodeLine{56     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classConfiguration_aeb0ae016dba77df19b49fd7859bfd3e8}{printHelp}}();}
+\DoxyCodeLine{57 \};}
+
+\end{DoxyCode}

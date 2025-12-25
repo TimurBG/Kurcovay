@@ -1,0 +1,5 @@
+<map id="Server.h" name="Server.h">
+<area shape="rect" id="node1" title="Заголовочный файл класса Server для управления сервером" alt="" coords="68,5,143,32"/>
+<area shape="rect" id="node2" href="$Server_8cpp.html" title="Реализация класса Server." alt="" coords="5,80,96,107"/>
+<area shape="rect" id="node3" href="$main_8cpp.html" title="Основной файл приложения сервера" alt="" coords="120,80,203,107"/>
+</map>

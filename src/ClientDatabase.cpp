@@ -1,8 +1,20 @@
-// ClientDatabase.cpp
+/**
+ * @file ClientDatabase.cpp
+ * @brief Реализация класса ClientDatabase
+ */
+
 #include "ClientDatabase.h"
 #include <iostream>
 #include <sstream>
 
+/**
+ * @brief Загружает базу пользователей из файла
+ * @param fname Имя файла базы данных
+ * @return true если загрузка успешна, false в противном случае
+ * 
+ * Формат файла: каждая строка содержит логин и пароль, разделенные двоеточием.
+ * Пример: user1:password1
+ */
 bool ClientDatabase::loadFromFile(const std::string& fname) {
     filename = fname;
     users.clear();
@@ -27,10 +39,20 @@ bool ClientDatabase::loadFromFile(const std::string& fname) {
     return true;
 }
 
+/**
+ * @brief Проверяет существование пользователя в базе
+ * @param login Логин пользователя
+ * @return true если пользователь существует, false в противном случае
+ */
 bool ClientDatabase::userExists(const std::string& login) const {
     return users.find(login) != users.end();
 }
 
+/**
+ * @brief Получает пароль пользователя
+ * @param login Логин пользователя
+ * @return Пароль пользователя или пустая строка если пользователь не найден
+ */
 std::string ClientDatabase::getPassword(const std::string& login) const {
     auto it = users.find(login);
     return (it != users.end()) ? it->second : "";

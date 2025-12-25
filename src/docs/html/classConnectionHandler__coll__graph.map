@@ -1,0 +1,5 @@
+<map id="ConnectionHandler" name="ConnectionHandler">
+<area shape="rect" id="node1" title="Класс для обработки клиентских соединений" alt="" coords="52,95,199,121"/>
+<area shape="rect" id="node2" href="$classClientDatabase.html" title="Класс для работы с базой данных пользователей" alt="" coords="5,5,128,32"/>
+<area shape="rect" id="node3" href="$classLogger.html" title="Класс для ведения журнала событий" alt="" coords="152,5,219,32"/>
+</map>
